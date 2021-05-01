@@ -1,7 +1,25 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const path = require("path")
 
-// You can delete this file if you're not using it
+// create pages dynamically
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const result = await graphql(`
+    {
+      events: allStrapiEvent {
+        nodes {
+          slug
+        }
+      }
+    }
+  `)
+
+  result.data.events.nodes.forEach(evt => {
+    createPage({
+      path: `/events/${evt.slug}`,
+      component: path.resolve(`src/templates/event.js`),
+      context: {
+        slug: evt.slug,
+      },
+    })
+  })
+}
