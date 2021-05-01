@@ -5,23 +5,23 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 export const query = graphql`
-  query GetSingleEvent($slug: String) {
-    event: strapiEvent(slug: { eq: $slug }) {
+  query GetSinglePlayer($slug: String) {
+    player: strapiPlayer(slug: { eq: $slug }) {
       name
-      date
+      role
     }
   }
 `
 
-const Event = ({ data }) => {
-    const { name, date } = data.event
+const Player = ({ data }) => {
+    const { name, role } = data.player
     return (
         <Layout>
             <Seo title={name} />
           <h3>{name}</h3>
-          <p>{date}</p>
+          <p>{role}</p>
         </Layout>
       )
 }
 
-export default Event
+export default Player

@@ -20,6 +20,7 @@ const IndexPage = () => (
     />
     <p>
       <Link to="/events/">Events</Link> <br />
+      <Link to="/players/">Players</Link> <br />
     </p>
   </Layout>
 )
