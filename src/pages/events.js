@@ -1,43 +1,24 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby"
+import React from 'react'
+import Layout from "../components/App/Layout"
+import Navbar from "../components/App/Navbar"
+import PageBanner from '../components/Common/PageBanner'
+import Footer from "../components/App/Footer"
+import EventsCard from '../components/Events/EventsCard'
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-const query = graphql`{
-    allStrapiEvent {
-        nodes {
-            slug
-            name
-            date
-        }
-    }
-}
-`
-
-const EventsPage = () => {
-    const data = useStaticQuery(query)
-
+const Events = () => {
     return (
         <Layout>
-            <Seo title="Events" />
-            <ol>
-                {
-                    data.allStrapiEvent.nodes.map(event => {
-                        return (
-                            <li>
-                                <Link to={event.slug}>
-                                    <h2>{event.name}</h2>
-                                    <p>{event.date}</p>
-                                </Link>
-                            </li>
-                        )
-                    })
-                }
-            </ol>
+            <Navbar />
+            <PageBanner
+                pageTitle="Events" 
+                homePageText="Home" 
+                homePageUrl="/" 
+                activePageText="Events" 
+            />
+            <EventsCard />
+            <Footer />
         </Layout>
-    )
+    );
 }
 
-export default EventsPage
+export default Events

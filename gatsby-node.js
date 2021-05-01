@@ -9,7 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
         nodes {
           slug
         }
-      },
+      }
       players: allStrapiPlayer {
         nodes {
           slug

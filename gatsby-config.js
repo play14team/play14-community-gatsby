@@ -3,7 +3,7 @@ module.exports = {
     title: `#play14`,
     description: `#play14 community website - We belive in playfulness`,
     author: `Cédric Pontet`,
-    email: `cedric@play14.org`
+    email: `cedric@play14.org`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -20,25 +20,21 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `#play14 community website`,
+        short_name: `play14`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/hash.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/hash.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [
-          `event`,
-          `player`
-        ],
+        contentTypes: [`event`, `player`],
         //If using single types place them in this array.
         singleTypes: [`contact`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).

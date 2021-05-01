@@ -1,28 +1,37 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
+import Navbar from "../components/App/Navbar"
+import Footer from "../components/App/Footer"
+import Layout from "../components/App/Layout"
+import Banner from "../components/Index/Banner"
+import OurSolutions from "../components/Index/OurSolutions"
+import OurServices from "../components/Index/OurServices"
+import OurFeatures from "../components/Index/OurFeatures"
+import TeamMember from "../components/Index/TeamMember"
+import RecentProjects from "../components/Index/RecentProjects"
+import Pricing from "../components/Index/Pricing"
+import Testimonials from "../components/Index/Testimonials"
+import Partner from "../components/Index/Partner"
+import ProjectStartArea from "../components/Index/ProjectStartArea"
+import OurBlog from "../components/Index/OurBlog"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+const Home = () => {
+  return (
+    <Layout>
+      <Navbar />
+      <Banner />
+      <OurSolutions />
+      <OurServices />
+      <OurFeatures />
+      <TeamMember />
+      <RecentProjects />
+      <Pricing />
+      <Testimonials />
+      <Partner />
+      <OurBlog />
+      <ProjectStartArea />
+      <Footer />
+    </Layout>
+  )
+}
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Welcome to #play14</h1>
-    <p>We believe in playfulness</p>
-    <StaticImage
-      src="../images/play14_500x500.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="#play14 logo"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/events/">Events</Link> <br />
-      <Link to="/players/">Players</Link> <br />
-    </p>
-  </Layout>
-)
-
-export default IndexPage
+export default Home

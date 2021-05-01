@@ -3,12 +3,12 @@
   "private": true,
   "description": "#play14 community website",
   "version": "0.1.0",
+  "license": "0BSD",
   "author": "Cédric Pontet <cedric@play14.org>",
   "dependencies": {
     "@loadable/component": "^5.14.1",
     "gatsby": "^3.3.1",
     "gatsby-image": "^3.2.0",
-    "gatsby-plugin-gatsby-cloud": "^2.2.0",
     "gatsby-plugin-html-attributes": "^1.0.5",
     "gatsby-plugin-image": "^1.2.1",
     "gatsby-plugin-manifest": "^3.2.0",
@@ -37,7 +37,6 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
@@ -49,9 +48,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/play14team/play14-community-gatsby"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/play14team/play14-community-gatsby/issues"
   }
 }
