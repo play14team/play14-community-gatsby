@@ -8,7 +8,7 @@ export const useContact = () => {
             name
             email
             shortDescription
-            socialnetworks {
+            socialNetworks {
               type
               url
             }

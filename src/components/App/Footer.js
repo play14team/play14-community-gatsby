@@ -21,7 +21,7 @@ const Footer = () => {
                             </a>
                             <p>{contacts.shortDescription}</p>
 
-                            <SocialLinks socialnetworks={contacts.socialnetworks} />
+                            <SocialLinks socialNetworks={contacts.socialNetworks} className="social-link" />
                         </div>
                     </div>
 
