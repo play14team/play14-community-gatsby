@@ -7,12 +7,12 @@ import speaker4 from '../../assets/images/speaker/speaker4.jpg'
 import speaker5 from '../../assets/images/speaker/speaker5.jpg'
 import speaker6 from '../../assets/images/speaker/speaker6.jpg'
 
-const EventSpeakers = () => {
+const EventSpeakers = (props) => {
     return (
         <div className="scientist-area bg-fafafb pt-100 pb-70">
             <div className="container">
                 <div className="section-title">
-                    <h2>Event Speakers</h2>
+                    <h2>Event hosts</h2>
                 </div>
 
                 <div className="row">

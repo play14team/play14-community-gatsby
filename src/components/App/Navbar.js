@@ -230,38 +230,13 @@ const Navbar = () => {
                                     {/* Events */}
                                     <li className="nav-item">
                                         <Link 
-                                            to="#" 
+                                            to="/events" 
                                             activeClassName="active"
-                                            onClick={e => e.preventDefault()}
+                                            onClick={() => setCollapsed(true)}
                                             className="nav-link"
                                         >
-                                            Events <i className='bx bx-chevron-down'></i>
+                                            Events
                                         </Link>
-
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item">
-                                                <Link 
-                                                    to="/events" 
-                                                    activeClassName="active"
-                                                    onClick={() => setCollapsed(true)}
-                                                    className="nav-link"
-                                                >
-                                                    Events
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link 
-                                                    to="/event-details" 
-                                                    activeClassName="active"
-                                                    onClick={() => setCollapsed(true)}
-                                                    className="nav-link"
-                                                >
-                                                    Event Details
-                                                </Link>
-                                            </li>
-
-                                        </ul>
                                     </li>
 
                                     {/* Players */}

@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useGetEvents } from '../../hooks/use-get-events'
 
 const EventsCard = () => {
-    const events = useGetEvents()
+    let events = useGetEvents()
     return (
         <div className="events-area pt-100 pb-70">
             <div className="container">

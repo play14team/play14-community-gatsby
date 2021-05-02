@@ -1,6 +1,8 @@
 import React from 'react'
 
-const UpcomingEventTimer = () => {
+const UpcomingEventTimer = (props) => {
+
+    const { date } = props
 
     const [days, setDays] = React.useState('');
     const [hours, setHours] = React.useState('');
@@ -15,7 +17,7 @@ const UpcomingEventTimer = () => {
     }, [])
 
     const commingSoonTime = () => {
-        let endTime = new Date("August 23, 2022 17:00:00 PDT");
+        let endTime = date;
         let endTimeParse = (Date.parse(endTime)) / 1000;
         let now = new Date();
         let nowParse = (Date.parse(now) / 1000);
