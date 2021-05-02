@@ -2,7 +2,7 @@ import React from 'react';
 import { useRecoilState } from 'recoil'
 import { collapsedState } from '../../utils/recoil-atoms'
 import {Link} from 'gatsby'
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/logo-grey.png"
 
 const Navbar = () => {
     const [collapsed, setCollapsed] = useRecoilState(collapsedState);
@@ -56,6 +56,7 @@ const Navbar = () => {
 
                             <div className={classOne} id="navbarSupportedContent">
                                 <ul className="navbar-nav">
+                                    {/* Home */}
                                     <li className="nav-item">
                                         <Link 
                                             to="/" 
@@ -168,6 +169,7 @@ const Navbar = () => {
                                         </ul>
                                     </li>
 
+                                    {/* About Us */}
                                     <li className="nav-item">
                                         <Link 
                                             to="#" 
@@ -225,6 +227,7 @@ const Navbar = () => {
                                         </ul>
                                     </li>
 
+                                    {/* Events */}
                                     <li className="nav-item">
                                         <Link 
                                             to="#" 
@@ -232,34 +235,48 @@ const Navbar = () => {
                                             onClick={e => e.preventDefault()}
                                             className="nav-link"
                                         >
-                                            Services <i className='bx bx-chevron-down'></i>
+                                            Events <i className='bx bx-chevron-down'></i>
                                         </Link>
-                                        
+
                                         <ul className="dropdown-menu">
                                             <li className="nav-item">
                                                 <Link 
-                                                    to="/services" 
+                                                    to="/events" 
                                                     activeClassName="active"
                                                     onClick={() => setCollapsed(true)}
                                                     className="nav-link"
                                                 >
-                                                    Services
+                                                    Events
                                                 </Link>
                                             </li>
 
                                             <li className="nav-item">
                                                 <Link 
-                                                    to="/service-details" 
+                                                    to="/event-details" 
                                                     activeClassName="active"
                                                     onClick={() => setCollapsed(true)}
                                                     className="nav-link"
                                                 >
-                                                    Service Details
+                                                    Event Details
                                                 </Link>
                                             </li>
+
                                         </ul>
                                     </li>
 
+                                    {/* Players */}
+                                    <li className="nav-item">
+                                        <Link 
+                                            to="/players" 
+                                            activeClassName="active"
+                                            onClick={() => setCollapsed(true)}
+                                            className="nav-link"
+                                        >
+                                            Players
+                                        </Link>
+                                    </li>
+
+                                    {/* Blog */}
                                     <li className="nav-item">
                                         <Link 
                                             to="#" 
@@ -267,35 +284,35 @@ const Navbar = () => {
                                             onClick={e => e.preventDefault()}
                                             className="nav-link"
                                         >
-                                            Case Studies <i className='bx bx-chevron-down'></i>
-                                                
+                                            Blog <i className='bx bx-chevron-down'></i>
                                         </Link>
-                                        
+
                                         <ul className="dropdown-menu">
                                             <li className="nav-item">
                                                 <Link 
-                                                    to="/case-studies" 
+                                                    to="/blog" 
                                                     activeClassName="active"
                                                     onClick={() => setCollapsed(true)}
                                                     className="nav-link"
                                                 >
-                                                    Case Studies
+                                                    Blog Grid
                                                 </Link>
                                             </li>
 
                                             <li className="nav-item">
                                                 <Link 
-                                                    to="/case-studies-details" 
+                                                    to="/blog-details" 
                                                     activeClassName="active"
                                                     onClick={() => setCollapsed(true)}
                                                     className="nav-link"
                                                 >
-                                                    Case Studies Details
+                                                    Blog Details
                                                 </Link>
                                             </li>
                                         </ul>
                                     </li>
 
+                                    {/* Pages */}
                                     <li className="nav-item">
                                         <Link 
                                             to="#" 
@@ -307,6 +324,79 @@ const Navbar = () => {
                                         </Link>
 
                                         <ul className="dropdown-menu">
+
+                                            <li className="nav-item">
+                                            <Link 
+                                                to="#" 
+                                                activeClassName="active"
+                                                onClick={e => e.preventDefault()}
+                                                className="nav-link"
+                                            >
+                                                Services <i className='bx bx-chevron-down'></i>
+                                            </Link>
+                                            
+                                            <ul className="dropdown-menu">
+                                                <li className="nav-item">
+                                                    <Link 
+                                                        to="/services" 
+                                                        activeClassName="active"
+                                                        onClick={() => setCollapsed(true)}
+                                                        className="nav-link"
+                                                    >
+                                                        Services
+                                                    </Link>
+                                                </li>
+
+                                                <li className="nav-item">
+                                                    <Link 
+                                                        to="/service-details" 
+                                                        activeClassName="active"
+                                                        onClick={() => setCollapsed(true)}
+                                                        className="nav-link"
+                                                    >
+                                                        Service Details
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li className="nav-item">
+                                            <Link 
+                                                to="#" 
+                                                activeClassName="active"
+                                                onClick={e => e.preventDefault()}
+                                                className="nav-link"
+                                            >
+                                                Case Studies <i className='bx bx-chevron-down'></i>
+                                                    
+                                            </Link>
+                                            
+                                            <ul className="dropdown-menu">
+                                                <li className="nav-item">
+                                                    <Link 
+                                                        to="/case-studies" 
+                                                        activeClassName="active"
+                                                        onClick={() => setCollapsed(true)}
+                                                        className="nav-link"
+                                                    >
+                                                        Case Studies
+                                                    </Link>
+                                                </li>
+
+                                                <li className="nav-item">
+                                                    <Link 
+                                                        to="/case-studies-details" 
+                                                        activeClassName="active"
+                                                        onClick={() => setCollapsed(true)}
+                                                        className="nav-link"
+                                                    >
+                                                        Case Studies Details
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+
                                             <li className="nav-item">
                                                 <Link 
                                                     to="#" 
@@ -340,63 +430,6 @@ const Navbar = () => {
                                                         </Link>
                                                     </li>
                                                 </ul>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link 
-                                                    to="#" 
-                                                    activeClassName="active"
-                                                    onClick={e => e.preventDefault()}
-                                                    className="nav-link"
-                                                >
-                                                    Events <i className='bx bx-chevron-down'></i>
-                                                </Link>
-
-                                                <ul className="dropdown-menu">
-                                                    <li className="nav-item">
-                                                        <Link 
-                                                            to="/events" 
-                                                            activeClassName="active"
-                                                            onClick={() => setCollapsed(true)}
-                                                            className="nav-link"
-                                                        >
-                                                            Events
-                                                        </Link>
-                                                    </li>
-
-                                                    <li className="nav-item">
-                                                        <Link 
-                                                            to="/event-details" 
-                                                            activeClassName="active"
-                                                            onClick={() => setCollapsed(true)}
-                                                            className="nav-link"
-                                                        >
-                                                            Event Details
-                                                        </Link>
-                                                    </li>
-
-                                                    <li className="nav-item">
-                                                        <Link 
-                                                            to="/events2" 
-                                                            activeClassName="active"
-                                                            onClick={() => setCollapsed(true)}
-                                                            className="nav-link"
-                                                        >
-                                                            Events (dynamic)
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link 
-                                                    to="/players" 
-                                                    activeClassName="active"
-                                                    onClick={() => setCollapsed(true)}
-                                                    className="nav-link"
-                                                >
-                                                    Players
-                                                </Link>
                                             </li>
 
                                             <li className="nav-item">
@@ -489,40 +522,6 @@ const Navbar = () => {
                                         </ul>
                                     </li>
 
-                                    <li className="nav-item">
-                                        <Link 
-                                            to="#" 
-                                            activeClassName="active"
-                                            onClick={e => e.preventDefault()}
-                                            className="nav-link"
-                                        >
-                                            Blog <i className='bx bx-chevron-down'></i>
-                                        </Link>
-
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item">
-                                                <Link 
-                                                    to="/blog" 
-                                                    activeClassName="active"
-                                                    onClick={() => setCollapsed(true)}
-                                                    className="nav-link"
-                                                >
-                                                    Blog Grid
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link 
-                                                    to="/blog-details" 
-                                                    activeClassName="active"
-                                                    onClick={() => setCollapsed(true)}
-                                                    className="nav-link"
-                                                >
-                                                    Blog Details
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </li>
                                 </ul>
                             
                                 <div className="others-option d-flex align-items-center">
