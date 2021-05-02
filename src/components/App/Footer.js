@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'gatsby'
 import logo from "../../assets/images/logo.png"
 import footerMap from "../../assets/images/footer-map.png"
+import SocialLinks from "../Socials/SocialLinks"
 import { useContact } from '../../hooks/use-contact'
 
 const Footer = () => {
@@ -20,18 +21,7 @@ const Footer = () => {
                             </a>
                             <p>{contacts.shortDescription}</p>
 
-                            <ul className="social-link">
-                                {contacts.socialnetworks.map(s => {
-                                    const imgName = "bx bxl-" + s.type.toLowerCase()
-                                    return (
-                                        <li>
-                                            <Link to={s.url} className="d-block" target="_blank" rel="noreferrer">
-                                                <i className={imgName}></i>
-                                            </Link>
-                                        </li>
-                                    )
-                                })}
-                            </ul>
+                            <SocialLinks socialnetworks={contacts.socialnetworks} />
                         </div>
                     </div>
 
