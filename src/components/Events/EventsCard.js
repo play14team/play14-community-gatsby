@@ -29,6 +29,8 @@ const EventsCard = () => {
                                         </h3>
                                         <span className="location">
                                             <i className="bx bx-map"></i> {event.location.name}, {event.venue.name}
+                                        </span>
+                                        <span className="location">
                                             <i className="bx bx-chevrons-right"></i> {event.status}
                                         </span>
                                     </div>
