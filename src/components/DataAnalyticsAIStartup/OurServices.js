@@ -16,7 +16,7 @@ const OurServices = () => {
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">
-                        <img src={starIcon} alt="image" /> 
+                        <img src={starIcon} alt="image1" /> 
                         Our Services
                     </span>
                     <h2>We Offer Professional Solutions For Business</h2>
@@ -27,7 +27,7 @@ const OurServices = () => {
                     <div className="col-lg-4 col-md-6 col-sm-6">
                         <div className="single-services-item">
                             <div className="icon">
-                                <img src={icon1} alt="image" />
+                                <img src={icon1} alt="image1" />
                             </div>
                             <h3>
                                 <Link to="/service-details">
@@ -42,10 +42,10 @@ const OurServices = () => {
                             </Link>
 
                             <div className="shape1">
-                                <img src={shape1} alt="image" />
+                                <img src={shape1} alt="image1" />
                             </div>
                             <div className="shape2">
-                                <img src={shape2} alt="image" />
+                                <img src={shape2} alt="image1" />
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ const OurServices = () => {
                     <div className="col-lg-4 col-md-6 col-sm-6">
                         <div className="single-services-item">
                             <div className="icon">
-                                <img src={icon2} alt="image" />
+                                <img src={icon2} alt="image1" />
                             </div>
                             <h3>
                                 <Link to="/service-details">
@@ -68,10 +68,10 @@ const OurServices = () => {
                             </Link>
                             
                             <div className="shape1">
-                                <img src={shape1} alt="image" />
+                                <img src={shape1} alt="image1" />
                             </div>
                             <div className="shape2">
-                                <img src={shape2} alt="image" />
+                                <img src={shape2} alt="image1" />
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ const OurServices = () => {
                     <div className="col-lg-4 col-md-6 col-sm-6">
                         <div className="single-services-item">
                             <div className="icon">
-                                <img src={icon3} alt="image" />
+                                <img src={icon3} alt="image1" />
                             </div>
                             <h3>
                                 <Link to="/service-details">
@@ -94,10 +94,10 @@ const OurServices = () => {
                             </Link>
                             
                             <div className="shape1">
-                                <img src={shape1} alt="image" />
+                                <img src={shape1} alt="image1" />
                             </div>
                             <div className="shape2">
-                                <img src={shape2} alt="image" />
+                                <img src={shape2} alt="image1" />
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@ const OurServices = () => {
                     <div className="col-lg-4 col-md-6 col-sm-6">
                         <div className="single-services-item">
                             <div className="icon">
-                                <img src={icon4} alt="image" />
+                                <img src={icon4} alt="image1" />
                             </div>
                             <h3>
                                 <Link to="/service-details">
@@ -120,10 +120,10 @@ const OurServices = () => {
                             </Link>
                             
                             <div className="shape1">
-                                <img src={shape1} alt="image" />
+                                <img src={shape1} alt="image1" />
                             </div>
                             <div className="shape2">
-                                <img src={shape2} alt="image" />
+                                <img src={shape2} alt="image1" />
                             </div>
                         </div>
                     </div>
@@ -131,7 +131,7 @@ const OurServices = () => {
                     <div className="col-lg-4 col-md-6 col-sm-6">
                         <div className="single-services-item">
                             <div className="icon">
-                                <img src={icon5} alt="image" />
+                                <img src={icon5} alt="image1" />
                             </div>
                             <h3>
                                 <Link to="/service-details">
@@ -146,10 +146,10 @@ const OurServices = () => {
                             </Link>
                             
                             <div className="shape1">
-                                <img src={shape1} alt="image" />
+                                <img src={shape1} alt="image1" />
                             </div>
                             <div className="shape2">
-                                <img src={shape2} alt="image" />
+                                <img src={shape2} alt="image1" />
                             </div>
                         </div>
                     </div>
@@ -157,7 +157,7 @@ const OurServices = () => {
                     <div className="col-lg-4 col-md-6 col-sm-6">
                         <div className="single-services-item">
                             <div className="icon">
-                                <img src={icon6} alt="image" />
+                                <img src={icon6} alt="image1" />
                             </div>
                             <h3>
                                 <Link to="/service-details">
@@ -172,10 +172,10 @@ const OurServices = () => {
                             </Link>
                             
                             <div className="shape1">
-                                <img src={shape1} alt="image" />
+                                <img src={shape1} alt="image1" />
                             </div>
                             <div className="shape2">
-                                <img src={shape2} alt="image" />
+                                <img src={shape2} alt="image1" />
                             </div>
                         </div>
                     </div>

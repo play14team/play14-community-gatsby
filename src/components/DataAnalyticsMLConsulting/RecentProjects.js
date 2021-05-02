@@ -15,7 +15,7 @@ const RecentProjects = () => {
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">
-                        <img src={StarIcon} alt="image" /> Recent Projects
+                        <img src={StarIcon} alt="image1" /> Recent Projects
                     </span>
                     <h2>Check Some Of Our Recent Work</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>

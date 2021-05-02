@@ -9,7 +9,7 @@ const OurSolutions = () => {
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">
-                        <img src={StarIcon} alt="image" /> 
+                        <img src={StarIcon} alt="image1" /> 
                         Our Solutions
                     </span>
                     <h2>We Different From Others Should Choose Us</h2>

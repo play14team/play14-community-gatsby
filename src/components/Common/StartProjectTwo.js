@@ -11,7 +11,7 @@ const StartProjectTwo = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-12">
                         <div className="project-start-image">
-                            <img src={ProjectStart1} alt="image" />
+                            <img src={ProjectStart1} alt="image1" />
                         </div>
                     </div>
 
@@ -31,7 +31,7 @@ const StartProjectTwo = () => {
             </div>
 
             <div className="circle-shape1">
-                <img src={CircleShape} alt="image" />
+                <img src={CircleShape} alt="image1" />
             </div>
         </div>
     )

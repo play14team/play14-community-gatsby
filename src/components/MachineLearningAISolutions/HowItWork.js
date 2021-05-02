@@ -11,7 +11,7 @@ const HowItWork = () => {
                     <div className="col-lg-6 col-md-12">
                         <div className="how-its-work-content">
                             <span className="sub-title">
-                                <img src={StarIcon} alt="image" /> 
+                                <img src={StarIcon} alt="image1" /> 
                                 How It's Work
                             </span>
                             <h2>The Data Science Process</h2>
@@ -44,7 +44,7 @@ const HowItWork = () => {
 
                     <div className="col-lg-6 col-md-12">
                         <div className="how-its-work-image">
-                            <img src={HowItsWork} alt="image" />
+                            <img src={HowItsWork} alt="image1" />
                         </div>
                     </div>
                 </div>

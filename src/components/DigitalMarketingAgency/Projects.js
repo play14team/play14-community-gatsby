@@ -21,7 +21,7 @@ const Projects = () => {
                     <div className="col-lg-4 col-md-6">
                         <div className="single-projects-box">
                             <div className="image">
-                                <img src={project1} alt="image" />
+                                <img src={project1} alt="image1" />
 
                                 <Link to="/case-studies-details" className="link-btn">
                                     <i className='bx bx-plus'></i>
@@ -42,7 +42,7 @@ const Projects = () => {
                     <div className="col-lg-4 col-md-6">
                         <div className="single-projects-box">
                             <div className="image">
-                                <img src={project2} alt="image" />
+                                <img src={project2} alt="image1" />
 
                                 <Link to="/case-studies-details" className="link-btn">
                                     <i className='bx bx-plus'></i>
@@ -63,7 +63,7 @@ const Projects = () => {
                     <div className="col-lg-4 col-md-6">
                         <div className="single-projects-box">
                             <div className="image">
-                                <img src={project3} alt="image" />
+                                <img src={project3} alt="image1" />
 
                                 <Link to="/case-studies-details" className="link-btn">
                                     <i className='bx bx-plus'></i>
@@ -84,7 +84,7 @@ const Projects = () => {
                     <div className="col-lg-4 col-md-6">
                         <div className="single-projects-box">
                             <div className="image">
-                                <img src={project4} alt="image" />
+                                <img src={project4} alt="image1" />
 
                                 <Link to="/case-studies-details" className="link-btn">
                                     <i className='bx bx-plus'></i>
@@ -105,7 +105,7 @@ const Projects = () => {
                     <div className="col-lg-4 col-md-6">
                         <div className="single-projects-box ">
                             <div className="image">
-                                <img src={project5} alt="image" />
+                                <img src={project5} alt="image1" />
 
                                 <Link to="/case-studies-details" className="link-btn">
                                     <i className='bx bx-plus'></i>
@@ -126,7 +126,7 @@ const Projects = () => {
                     <div className="col-lg-4 col-md-6">
                         <div className="single-projects-box">
                             <div className="image">
-                                <img src={project6} alt="image" />
+                                <img src={project6} alt="image1" />
 
                                 <Link to="/case-studies-details" className="link-btn">
                                     <i className='bx bx-plus'></i>

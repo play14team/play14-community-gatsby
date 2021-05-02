@@ -10,9 +10,9 @@ const AboutUs = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-12">
                         <div className="about-img">
-                            <img src={img8} alt="image" />
+                            <img src={img8} alt="image1" />
                             <div className="shape">
-                                <img src={shape1} alt="image" />
+                                <img src={shape1} alt="image1" />
                             </div>
                         </div>
                     </div>

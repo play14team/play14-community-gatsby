@@ -15,7 +15,7 @@ const OurMission = () => {
                         <div className="our-mission-content">
                             <div className="content">
                                 <span className="sub-title">
-                                    <img src={StarIcon} alt="image" /> 
+                                    <img src={StarIcon} alt="image1" /> 
                                     Our Mission
                                 </span>
                                 <h2>Data Science & Data Analysis Agency</h2>
@@ -63,9 +63,9 @@ const OurMission = () => {
 
                     <div className="col-lg-6 col-md-12">
                         <div className="our-mission-image">
-                            <img src={OurMissionImg} alt="image" />
+                            <img src={OurMissionImg} alt="image1" />
                             <div className="shape">
-                                <img src={OurMissionShape1} alt="image" />
+                                <img src={OurMissionShape1} alt="image1" />
                             </div>
                         </div>
                     </div>

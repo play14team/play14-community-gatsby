@@ -13,7 +13,7 @@ const TeamMember = () => {
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">
-                        <img src={StarIcon} alt="image" /> 
+                        <img src={StarIcon} alt="image1" /> 
                         Team Members
                     </span>
                     <h2>Our Data Scientist</h2>

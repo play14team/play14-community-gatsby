@@ -22,7 +22,7 @@ const BlogCard = () => {
                         <div className="single-blog-post bg-fffbf5">
                             <div className="post-image">
                                 <Link to="/blog-details">
-                                    <img src={img4} alt="image" />
+                                    <img src={img4} alt="image1" />
                                 </Link>
                             </div>
 
@@ -30,7 +30,7 @@ const BlogCard = () => {
                                 <ul className="post-meta d-flex justify-content-between align-items-center">
                                     <li>
                                         <div className="post-author d-flex align-items-center">
-                                            <img src={user1} className="rounded-circle" alt="image" />
+                                            <img src={user1} className="rounded-circle" alt="image1" />
                                             <span>Alex Morgan</span>
                                         </div>
                                     </li>
@@ -51,7 +51,7 @@ const BlogCard = () => {
                         <div className="single-blog-post bg-fffbf5">
                             <div className="post-image">
                                 <Link to="/blog-details">
-                                    <img src={img5} alt="image" />
+                                    <img src={img5} alt="image1" />
                                 </Link>
                             </div>
 
@@ -59,7 +59,7 @@ const BlogCard = () => {
                                 <ul className="post-meta d-flex justify-content-between align-items-center">
                                     <li>
                                         <div className="post-author d-flex align-items-center">
-                                            <img src={user2} className="rounded-circle" alt="image" />
+                                            <img src={user2} className="rounded-circle" alt="image1" />
                                             <span>Sarah Taylor</span>
                                         </div>
                                     </li>
@@ -80,7 +80,7 @@ const BlogCard = () => {
                         <div className="single-blog-post bg-fffbf5">
                             <div className="post-image">
                                 <Link to="/blog-details">
-                                    <img src={img6} alt="image" />
+                                    <img src={img6} alt="image1" />
                                 </Link>
                             </div>
 
@@ -88,7 +88,7 @@ const BlogCard = () => {
                                 <ul className="post-meta d-flex justify-content-between align-items-center">
                                     <li>
                                         <div className="post-author d-flex align-items-center">
-                                            <img src={user3} className="rounded-circle" alt="image" />
+                                            <img src={user3} className="rounded-circle" alt="image1" />
                                             <span>David Warner</span>
                                         </div>
                                     </li>
@@ -109,7 +109,7 @@ const BlogCard = () => {
                         <div className="single-blog-post bg-fffbf5">
                             <div className="post-image">
                                 <Link to="/blog-details">
-                                    <img src={img7} alt="image" />
+                                    <img src={img7} alt="image1" />
                                 </Link>
                             </div>
 
@@ -117,7 +117,7 @@ const BlogCard = () => {
                                 <ul className="post-meta d-flex justify-content-between align-items-center">
                                     <li>
                                         <div className="post-author d-flex align-items-center">
-                                            <img src={user4} className="rounded-circle" alt="image" />
+                                            <img src={user4} className="rounded-circle" alt="image1" />
                                             <span>David Warner</span>
                                         </div>
                                     </li>
@@ -138,7 +138,7 @@ const BlogCard = () => {
                         <div className="single-blog-post bg-fffbf5">
                             <div className="post-image">
                                 <Link to="/blog-details">
-                                    <img src={img8} alt="image" />
+                                    <img src={img8} alt="image1" />
                                 </Link>
                             </div>
 
@@ -146,7 +146,7 @@ const BlogCard = () => {
                                 <ul className="post-meta d-flex justify-content-between align-items-center">
                                     <li>
                                         <div className="post-author d-flex align-items-center">
-                                            <img src={user5} className="rounded-circle" alt="image" />
+                                            <img src={user5} className="rounded-circle" alt="image1" />
                                             <span>David Warner</span>
                                         </div>
                                     </li>
@@ -167,7 +167,7 @@ const BlogCard = () => {
                         <div className="single-blog-post bg-fffbf5">
                             <div className="post-image">
                                 <Link to="/blog-details">
-                                    <img src={img10} alt="image" />
+                                    <img src={img10} alt="image1" />
                                 </Link>
                             </div>
 
@@ -175,7 +175,7 @@ const BlogCard = () => {
                                 <ul className="post-meta d-flex justify-content-between align-items-center">
                                     <li>
                                         <div className="post-author d-flex align-items-center">
-                                            <img src={user6} className="rounded-circle" alt="image" />
+                                            <img src={user6} className="rounded-circle" alt="image1" />
                                             <span>David Warner</span>
                                         </div>
                                     </li>
