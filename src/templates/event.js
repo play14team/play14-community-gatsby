@@ -37,7 +37,7 @@ export const query = graphql`
             )
           }
         }
-        pictures {
+        images {
           formats{
             small{
               childImageSharp {
