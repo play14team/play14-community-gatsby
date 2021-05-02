@@ -16,8 +16,9 @@ export const useGetEvents = () => {
               name
             }
             status
-            pictures {
+            images {
               name
+              alternativeText
               formats {
                 small {
                     childImageSharp {
