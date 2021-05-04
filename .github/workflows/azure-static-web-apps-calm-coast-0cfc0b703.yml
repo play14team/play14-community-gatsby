@@ -18,6 +18,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
+      - name: Set env
+        run: |
+          touch .env.production
+          echo ENABLE_GATSBY_REFRESH_ENDPOINT=${{ secrets.ENABLE_GATSBY_REFRESH_ENDPOINT }} >> .env
+          echo GATSBY_GRAPHQL_IDE=${{ secrets.GATSBY_GRAPHQL_IDE }} >> .env
+          echo GATSBY_API_URL=${{ secrets.GATSBY_API_URL }} >> .env
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v0.0.1-preview
