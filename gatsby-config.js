@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `#play14`,
@@ -32,7 +36,9 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: process.env.GATSBY_API_URL,
+          // ? "http://13.73.142.154:1337/"
+          // : "http://localhost:1337",
         queryLimit: 1000, // Default to 100
         contentTypes: [`event`, `player`],
         //If using single types place them in this array.
