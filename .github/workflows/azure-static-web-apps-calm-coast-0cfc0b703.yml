@@ -32,7 +32,7 @@ jobs:
           output_location: "public" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env:
-          ENABLE_GATSBY_REFRESH_ENDPOINT: ${{ secrets.ENABLE_GATSBY_REFRESH_ENDPOINT
+          ENABLE_GATSBY_REFRESH_ENDPOINT: ${{ secrets.ENABLE_GATSBY_REFRESH_ENDPOINT }}
           GATSBY_GRAPHQL_IDE: ${{ secrets.GATSBY_GRAPHQL_IDE }}
           GATSBY_API_URL: ${{ secrets.GATSBY_API_URL }}
 
