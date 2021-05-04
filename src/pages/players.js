@@ -5,7 +5,7 @@ import Layout from "../components/App/Layout"
 import Navbar from "../components/App/Navbar"
 import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
-import Player from "../components/Players/Player"
+import PlayersCard from "../components/Players/PlayersCard"
 
 const query = graphql`
   {
@@ -45,20 +45,7 @@ const PlayersPage = () => {
           homePageUrl="/" 
           activePageText="Players" 
       />
-
-      <section className="scientist-area pb-70">
-        <div className="container">
-            <div className="row">
-              {
-                players.nodes.map(player => {
-                  return (<Player player={player} />)
-                })
-              }
-          </div>
-        </div>
-      </section>
-
-
+      <PlayersCard players={players} />
       <Footer />
     </Layout>
   )
