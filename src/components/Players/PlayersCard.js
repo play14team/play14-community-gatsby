@@ -12,21 +12,20 @@ const useGetPlayers = () => {
                 nodes {
                 slug
                 name
-                role
                 headline
                 socialNetworks {
                     url
                     type
                 }
                 avatar {
-                    childImageSharp{
-                    gatsbyImageData(
-                        width: 500
-                        placeholder: BLURRED
-                        formats: [AUTO, WEBP, AVIF]
-                    )
+                    childImageSharp {
+                        gatsbyImageData(
+                            width: 500
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP, AVIF]
+                        )
+                        }
                     }
-                }
                 }
             }
         }

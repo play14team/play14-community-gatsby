@@ -1,6 +1,7 @@
 import React from 'react'
 
-const CaseStudiesSidebar = () => {
+const CaseStudiesSidebar = (props) => {
+    const {player} = props
     return (
         <div className="case-studies-sidebar-sticky">
             <div className="case-studies-details-info">
@@ -9,39 +10,35 @@ const CaseStudiesSidebar = () => {
                         <div className="icon">
                             <i className='bx bx-user-pin'></i>
                         </div>
-                        <span>Client:</span>
-                        <a href="https://envytheme.com/" target="_blank" rel="noreferrer">EnvyTheme.com</a>
-                        <a href="https://themeforest.net/" target="_blank" rel="noreferrer">ThemeForest.com</a>
+                        <span>Role</span>
+                        {player.role}
                     </li>
                     <li>
                         <div className="icon">
-                            <i className='bx bx-map'></i>
+                            <i className='bx bx-building'></i>
                         </div>
-                        <span>Location:</span>
-                        New York, USA
-                    </li>
-                    <li>
-                        <div className="icon">
-                            <i className='bx bx-purchase-tag'></i>
-                        </div>
-                        <span>Technologies:</span>
-                        Python, Data Science
-                    </li>
-                    <li>
-                        <div className="icon">
-                            <i className='bx bx-check'></i>
-                        </div>
-                        <span>Completed:</span>
-                        28 April 2020
+                        <span>Company</span>
+                        {player.company}
                     </li>
                     <li>
                         <div className="icon">
                             <i className='bx bx-globe'></i>
                         </div>
                         <span>Website:</span>
-                        <a href="https://envytheme.com/" target="_blank" rel="noreferrer">EnvyTheme.com</a>
+                        <a href={player.website} target="_blank" rel="noreferrer">{player.website}</a>
+                    </li>
+                    <li>
+                        <div className="icon">
+                            <i className='bx bx-map'></i>
+                        </div>
+                        <span>Location</span>
+                        {player.city}
                     </li>
                 </ul>
+                <br></br>
+                <div className="events-details-location">
+                    <iframe src={player.embeddedMapUrl}></iframe>
+                </div>
             </div>
         </div>
     )

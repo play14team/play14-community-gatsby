@@ -12,19 +12,38 @@ export const query = graphql`
     player: strapiPlayer(slug: { eq: $slug }) {
       name
       role
+      headline
+      biography
+      company
+      website
+      city
+      embeddedMapUrl
+      socialNetworks {
+        url
+        type
+      }
+      avatar {
+        childImageSharp {
+          gatsbyImageData(
+            width: 500
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
     }
   }
 `
 
 const Player = ({ data }) => {
-  const { player } = data.player
+  const { player } = data
   return (
     <Layout>
       <Navbar />
       <PageBanner
           pageTitle={player.name}
-          homePageText="Home" 
-          homePageUrl="/" 
+          homePageText="Players" 
+          homePageUrl="/players" 
           activePageText={player.name}
       />
       <PlayerDetailsContent player={player} />
