@@ -3,7 +3,34 @@ import {Link} from 'gatsby'
 import logo from "../../assets/images/logo.png"
 import footerMap from "../../assets/images/footer-map.png"
 import SocialLinks from "../Socials/SocialLinks"
-import { useContact } from '../../hooks/use-contact'
+import { useStaticQuery, graphql } from "gatsby"
+
+const useContact = () => {
+    const { contacts } = useStaticQuery(
+      graphql`
+        query {
+          contacts : strapiContact {
+            name
+            email
+            shortDescription
+            socialNetworks {
+              type
+              url
+            }
+            address {
+              number
+              street
+              postalCode
+              city
+              country
+            }
+          }
+        }
+      `
+    )
+  
+    return contacts
+}
 
 const Footer = () => {
 

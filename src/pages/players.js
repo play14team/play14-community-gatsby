@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/App/Layout"
 import Navbar from "../components/App/Navbar"
@@ -7,35 +6,7 @@ import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
 import PlayersCard from "../components/Players/PlayersCard"
 
-const query = graphql`
-  {
-    players : allStrapiPlayer( sort: {fields:slug, order: ASC} ) {
-      nodes {
-        slug
-        name
-        role
-        headline
-        socialNetworks {
-          url
-          type
-        }
-        avatar {
-          childImageSharp{
-            gatsbyImageData(
-              width: 500
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
-          }
-        }
-      }
-    }
-  }
-`
-
 const PlayersPage = () => {
-  const { players } = useStaticQuery(query)
-
   return (
     <Layout>
       <Navbar />
@@ -45,7 +16,7 @@ const PlayersPage = () => {
           homePageUrl="/" 
           activePageText="Players" 
       />
-      <PlayersCard players={players} />
+      <PlayersCard />
       <Footer />
     </Layout>
   )

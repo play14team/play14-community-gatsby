@@ -66,7 +66,7 @@ const Event = ({ data }) => {
           activePageText={data.event.name} 
       />
       <EventDetailsContent event={data.event} />
-      <EventSpeakers event={data.event} />
+      <EventSpeakers event={data.event.hosts} />
       <Footer />
   </Layout>
 )

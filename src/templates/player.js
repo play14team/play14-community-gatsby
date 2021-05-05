@@ -5,6 +5,7 @@ import Layout from "../components/App/Layout"
 import Navbar from "../components/App/Navbar"
 import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
+import PlayerDetailsContent from "../components/Players/PlayerDetailsContent"
 
 export const query = graphql`
   query GetSinglePlayer($slug: String) {
@@ -16,18 +17,17 @@ export const query = graphql`
 `
 
 const Player = ({ data }) => {
-  const { name, role } = data.player
+  const { player } = data.player
   return (
     <Layout>
       <Navbar />
       <PageBanner
-          pageTitle={name}
+          pageTitle={player.name}
           homePageText="Home" 
           homePageUrl="/" 
-          activePageText={name}
+          activePageText={player.name}
       />
-      <h3>{name}</h3>
-      <p>{role}</p>
+      <PlayerDetailsContent player={player} />
       <Footer />
     </Layout>
   )
