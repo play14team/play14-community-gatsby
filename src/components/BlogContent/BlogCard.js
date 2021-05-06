@@ -1,197 +1,92 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import img4 from '../../assets/images/blog/blog-img4.jpg'
-import img5 from '../../assets/images/blog/blog-img5.jpg'
-import img6 from '../../assets/images/blog/blog-img6.jpg'
-import img7 from '../../assets/images/blog/blog-img7.jpg'
-import img8 from '../../assets/images/blog/blog-img8.jpg'
-import img10 from '../../assets/images/blog/blog-img10.jpg'
-import user1 from '../../assets/images/user1.jpg'
-import user2 from '../../assets/images/user2.jpg'
-import user3 from '../../assets/images/user3.jpg'
-import user4 from '../../assets/images/user4.jpg'
-import user5 from '../../assets/images/user5.jpg'
-import user6 from '../../assets/images/user6.jpg'
+import Moment from 'react-moment';
+import 'moment-timezone';
+
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { useStaticQuery, graphql } from "gatsby"
+
+const useGetBlogPosts = () => {
+    const { posts } = useStaticQuery(
+        graphql`
+        query GetBlogPosts {
+            posts: allStrapiBlog(sort: { fields: published_at, order: DESC }) {
+              nodes {
+                slug
+                title
+                content
+                published_at
+                author {
+                  name
+                  avatar {
+                    childImageSharp {
+                      gatsbyImageData(
+                        width: 50
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP, AVIF]
+                      )
+                    }
+                  }
+                }
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      width: 350
+                      placeholder: BLURRED
+                      formats: [AUTO, WEBP, AVIF]
+                    )
+                  }
+                }
+              }
+            }
+          }
+        `
+    )
+    return posts.nodes
+}
 
 const BlogCard = () => {
+    const posts  = useGetBlogPosts()
     return (
         <div className="blog-area ptb-100">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-4 col-md-6">
-                        <div className="single-blog-post bg-fffbf5">
-                            <div className="post-image">
-                                <Link to="/blog-details">
-                                    <img src={img4} alt="image1" />
-                                </Link>
-                            </div>
-
-                            <div className="post-content">
-                                <ul className="post-meta d-flex justify-content-between align-items-center">
-                                    <li>
-                                        <div className="post-author d-flex align-items-center">
-                                            <img src={user1} className="rounded-circle" alt="image1" />
-                                            <span>Alex Morgan</span>
+                    { 
+                        posts.map(post => {
+                            return (
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="single-blog-post bg-fffbf5">
+                                        <div className="post-image">
+                                            <Link to={post.slug}>
+                                                <GatsbyImage image={getImage(post.image)} alt={post.title} />
+                                            </Link>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <i className='flaticon-calendar'></i> April 5, 2020
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <Link to="/blog-details">
-                                        The Data Surrounding Higher Education
-                                    </Link>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div className="col-lg-4 col-md-6">
-                        <div className="single-blog-post bg-fffbf5">
-                            <div className="post-image">
-                                <Link to="/blog-details">
-                                    <img src={img5} alt="image1" />
-                                </Link>
-                            </div>
-
-                            <div className="post-content">
-                                <ul className="post-meta d-flex justify-content-between align-items-center">
-                                    <li>
-                                        <div className="post-author d-flex align-items-center">
-                                            <img src={user2} className="rounded-circle" alt="image1" />
-                                            <span>Sarah Taylor</span>
+                                        <div className="post-content">
+                                            <ul className="post-meta d-flex justify-content-between align-items-center">
+                                                <li>
+                                                    <div className="post-author d-flex align-items-center">
+                                                        <GatsbyImage image={getImage(post.author.avatar)} alt={post.author.name} />
+                                                        <span>{post.author.name}</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <i className='flaticon-calendar'></i> 
+                                                    <Moment format="MMM DD, YYYY">{post.published_at}</Moment>
+                                                </li>
+                                            </ul>
+                                            <h3>
+                                                <Link to={post.slug}>
+                                                    {post.title}
+                                                </Link>
+                                            </h3>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <i className='flaticon-calendar'></i> April 6, 2020
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <Link to="/blog-details">
-                                        Conversion Rate the Sales Funnel Optimization
-                                    </Link>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
 
-                    <div className="col-lg-4 col-md-6">
-                        <div className="single-blog-post bg-fffbf5">
-                            <div className="post-image">
-                                <Link to="/blog-details">
-                                    <img src={img6} alt="image1" />
-                                </Link>
-                            </div>
-
-                            <div className="post-content">
-                                <ul className="post-meta d-flex justify-content-between align-items-center">
-                                    <li>
-                                        <div className="post-author d-flex align-items-center">
-                                            <img src={user3} className="rounded-circle" alt="image1" />
-                                            <span>David Warner</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i className='flaticon-calendar'></i> April7, 2020
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <Link to="/blog-details">
-                                        Business Data is changing the world’s Energy
-                                    </Link>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6">
-                        <div className="single-blog-post bg-fffbf5">
-                            <div className="post-image">
-                                <Link to="/blog-details">
-                                    <img src={img7} alt="image1" />
-                                </Link>
-                            </div>
-
-                            <div className="post-content">
-                                <ul className="post-meta d-flex justify-content-between align-items-center">
-                                    <li>
-                                        <div className="post-author d-flex align-items-center">
-                                            <img src={user4} className="rounded-circle" alt="image1" />
-                                            <span>David Warner</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i className='flaticon-calendar'></i> April 8, 2020
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <Link to="/blog-details">
-                                        The data-driven approach to understanding
-                                    </Link>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6">
-                        <div className="single-blog-post bg-fffbf5">
-                            <div className="post-image">
-                                <Link to="/blog-details">
-                                    <img src={img8} alt="image1" />
-                                </Link>
-                            </div>
-
-                            <div className="post-content">
-                                <ul className="post-meta d-flex justify-content-between align-items-center">
-                                    <li>
-                                        <div className="post-author d-flex align-items-center">
-                                            <img src={user5} className="rounded-circle" alt="image1" />
-                                            <span>David Warner</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i className='flaticon-calendar'></i> April 9, 2020
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <Link to="/blog-details">
-                                        Finding the blocks of neighboring fields
-                                    </Link>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6">
-                        <div className="single-blog-post bg-fffbf5">
-                            <div className="post-image">
-                                <Link to="/blog-details">
-                                    <img src={img10} alt="image1" />
-                                </Link>
-                            </div>
-
-                            <div className="post-content">
-                                <ul className="post-meta d-flex justify-content-between align-items-center">
-                                    <li>
-                                        <div className="post-author d-flex align-items-center">
-                                            <img src={user6} className="rounded-circle" alt="image1" />
-                                            <span>David Warner</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i className='flaticon-calendar'></i> April 10, 2020
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <Link to="/blog-details">
-                                        <a>Data into Your Enterprise to Drive Insights</a>
-                                    </Link>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
- 
                     <div className="col-lg-12 col-md-12">
                         {/* Pagination */}
                         <div className="pagination-area text-center">

@@ -12,7 +12,11 @@ import user2 from '../../assets/images/user2.jpg'
 import user3 from '../../assets/images/user3.jpg'
 import user4 from '../../assets/images/user4.jpg'
 
-const BlogDetailsContent = () => {
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+const BlogDetailsContent = (props) => {
+    const { post } = props
+    console.log(post)
     return (
         <section className="blog-details-area ptb-100">
             <div className="container">
@@ -20,7 +24,7 @@ const BlogDetailsContent = () => {
                     <div className="col-lg-8 col-md-12">
                         <div className="blog-details-desc">
                             <div className="article-image">
-                                <img src={img6} alt="bb" />
+                                <GatsbyImage image={getImage(post.image.childImageSharp)} alt={post.title} />
                             </div>
 
                             <div className="article-content">
@@ -50,7 +54,7 @@ const BlogDetailsContent = () => {
                                     </ul>
                                 </div>
 
-                                <h3>It’s Time To Think Differently About Homeschooling</h3>
+                                <h3>{post.title}</h3>
 
                                 <p>Quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quia non numquam eius modi tempora incidunt ut labore et dolore magnam dolor sit amet, consectetur adipisicing.</p>
 
