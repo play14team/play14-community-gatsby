@@ -27,9 +27,6 @@ query GetSinglePost($slug: String) {
 `
 
 const BlogDetails = (props) => {
-    console.log("@@@@@@@@@@")
-    console.log(props)
-
     return (
         <Layout>
             <Navbar />
