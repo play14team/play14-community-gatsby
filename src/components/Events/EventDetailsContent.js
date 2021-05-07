@@ -14,7 +14,7 @@ const EventDetailsContent = (props) => {
     return (
         <section className="events-details-area pb-100">
             <div className="events-details-image">
-                {/* <GatsbyImage image={getImage(event.venue.pictures[0].formats.small)} alt={event.pictures[0].alternativeText} /> */}
+                <GatsbyImage image={getImage(event.images[0].formats.small)} alt={event.name} />
                 {
                     new Date(event.start) > new Date() ? <UpcomingEventTimer date={event.start} /> : ''
                 }
@@ -41,14 +41,9 @@ const EventDetailsContent = (props) => {
                             <ReactMarkdown>{event.description}</ReactMarkdown>
                         </div>
                     </div>
-                    {
-                        event.status === "OpenForRegistration" ?
-                            <div className="col-lg-4 col-md-12">
-                            <EventSidebar />
-                            </div>
-                        : ''
-                    }
-
+                    <div className="col-lg-4 col-md-12">
+                        <EventSidebar event={event} />
+                    </div>
 
                 </div>
             </div>
