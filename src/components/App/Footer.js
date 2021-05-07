@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/play14_transparent_gray_medium.png"
 import footerMap from "../../assets/images/footer-map.png"
 import SocialLinks from "../Socials/SocialLinks"
 import { useStaticQuery, graphql } from "gatsby"

@@ -2,7 +2,7 @@ import React from 'react';
 import { useRecoilState } from 'recoil'
 import { collapsedState } from '../../utils/recoil-atoms'
 import {Link} from 'gatsby'
-import logo from "../../assets/images/logo-grey.png"
+import logo from "../../assets/images/play14_transparent_gray_x-small.png"
 
 const Navbar = () => {
     const [collapsed, setCollapsed] = useRecoilState(collapsedState);
@@ -239,6 +239,18 @@ const Navbar = () => {
                                         </Link>
                                     </li>
 
+                                    {/* Games */}
+                                    <li className="nav-item">
+                                        <Link 
+                                            to="/games" 
+                                            activeClassName="active"
+                                            onClick={() => setCollapsed(true)}
+                                            className="nav-link"
+                                        >
+                                            Games
+                                        </Link>
+                                    </li>
+
                                     {/* Players */}
                                     <li className="nav-item">
                                         <Link 
@@ -254,37 +266,24 @@ const Navbar = () => {
                                     {/* Blog */}
                                     <li className="nav-item">
                                         <Link 
-                                            to="#" 
+                                            to="/blog" 
                                             activeClassName="active"
-                                            onClick={e => e.preventDefault()}
+                                            onClick={() => setCollapsed(true)}
                                             className="nav-link"
                                         >
-                                            Blog <i className='bx bx-chevron-down'></i>
+                                            Blog
                                         </Link>
+                                    </li>
 
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item">
-                                                <Link 
-                                                    to="/blog" 
-                                                    activeClassName="active"
-                                                    onClick={() => setCollapsed(true)}
-                                                    className="nav-link"
-                                                >
-                                                    Blog Grid
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link 
-                                                    to="/blog-details" 
-                                                    activeClassName="active"
-                                                    onClick={() => setCollapsed(true)}
-                                                    className="nav-link"
-                                                >
-                                                    Blog Details
-                                                </Link>
-                                            </li>
-                                        </ul>
+                                    <li className="nav-item">
+                                        <Link 
+                                            to="/contact" 
+                                            activeClassName="active"
+                                            onClick={() => setCollapsed(true)}
+                                            className="nav-link"
+                                        >
+                                            Contact
+                                        </Link>
                                     </li>
 
                                     {/* Pages */}
@@ -405,17 +404,6 @@ const Navbar = () => {
                                                         </Link>
                                                     </li>
                                                 </ul>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link 
-                                                    to="/contact" 
-                                                    activeClassName="active"
-                                                    onClick={() => setCollapsed(true)}
-                                                    className="nav-link"
-                                                >
-                                                    Contact
-                                                </Link>
                                             </li>
 
                                             <li className="nav-item">
