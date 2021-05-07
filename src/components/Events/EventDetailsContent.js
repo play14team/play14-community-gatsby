@@ -14,7 +14,7 @@ const EventDetailsContent = (props) => {
     return (
         <section className="events-details-area pb-100">
             <div className="events-details-image">
-                <GatsbyImage image={getImage(event.images[0].formats.small)} alt={event.name} />
+                <GatsbyImage image={getImage(event.defaultImage)} alt={event.name} />
                 {
                     new Date(event.start) > new Date() ? <UpcomingEventTimer date={event.start} /> : ''
                 }

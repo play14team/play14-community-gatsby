@@ -20,6 +20,16 @@ const useGetEvents = () => {
                 name
             }
             status
+            defaultImage {
+                childImageSharp {
+                    gatsbyImageData(
+                        width: 380
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP, AVIF]
+                    )
+
+                }
+            }
             images {
                 name
                 alternativeText
@@ -55,7 +65,7 @@ const EventsCard = () => {
                                 <div className="single-events-box">
                                     <div className="image">
                                         <Link to={event.slug} className="d-block">
-                                            <GatsbyImage image={getImage(event.images[0].formats.small)} alt={event.images[0].alternativeText} />
+                                            <GatsbyImage image={getImage(event.defaultImage)} alt={event.name} />
                                         </Link>
                                         <span className="date">{event.date}</span>
                                     </div>

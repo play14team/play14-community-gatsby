@@ -42,6 +42,16 @@ query GetSingleEvent($slug: String) {
         }
       }
     }
+    defaultImage {
+      childImageSharp {
+          gatsbyImageData(
+              width: 2048
+              height: 400
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+          )
+        }
+    }
     images {
       formats {
         small {
