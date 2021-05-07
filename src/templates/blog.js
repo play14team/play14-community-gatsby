@@ -8,35 +8,52 @@ import Footer from "../components/App/Footer"
 import BlogDetailsContent from '../components/BlogContent/BlogDetailsContent'
 
 export const query = graphql`
-query GetSinglePost($slug: String) {
-    post: strapiBlog(slug: { eq: $slug }) {
-      slug
-      title
-      image {
-        childImageSharp {
-          gatsbyImageData (
-                width: 300
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-          )
+query GetBlogPost($slug: String) {
+  post : allStrapiBlog(filter: {slug: { eq: $slug}}) {
+    edges {
+      node {
+        title
+        content
+        updatedAt
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 500, placeholder: BLURRED, formats: AUTO)
+          }
         }
+        date
+        slug
+        author {
+          name
+          avatar {
+            childImageSharp {
+              gatsbyImageData(width: 250, placeholder: BLURRED, formats: AUTO)
+            }
+          }
+        }
+      }
+      next {
+        slug
+      }
+      previous {
+        slug
       }
     }
   }
-  
+}
 `
 
 const BlogDetails = (props) => {
+  console.log(props.data.post.edges[0].node.title)
     return (
         <Layout>
             <Navbar />
             <PageBanner
-                pageTitle={props.data.post.title}
+                pageTitle={props.data.post.edges[0].node.title}
                 homePageText="Blog" 
                 homePageUrl="/blog" 
-                activePageText={props.data.post.title}
+                activePageText={props.data.post.edges[0].node.title}
             /> 
-            <BlogDetailsContent post={props.data.post} />
+            <BlogDetailsContent post={props.data.post.edges[0]} />
             <Footer />
         </Layout>
     )

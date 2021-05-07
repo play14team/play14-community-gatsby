@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import BlogSidebar from './BlogSidebar'
-import img6 from '../../assets/images/blog/blog-img6.jpg'
+import ReactMarkdown from 'react-markdown'
+
 import img4 from '../../assets/images/blog/blog-img4.jpg'
 import img5 from '../../assets/images/blog/blog-img5.jpg'
 import img7 from '../../assets/images/blog/blog-img7.jpg'
@@ -16,7 +17,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const BlogDetailsContent = (props) => {
     const { post } = props
-    console.log(post)
     return (
         <section className="blog-details-area ptb-100">
             <div className="container">
@@ -24,7 +24,7 @@ const BlogDetailsContent = (props) => {
                     <div className="col-lg-8 col-md-12">
                         <div className="blog-details-desc">
                             <div className="article-image">
-                                <GatsbyImage image={getImage(post.image.childImageSharp)} alt={post.title} />
+                                <GatsbyImage image={getImage(post.node.image.childImageSharp)} alt={post.node.title} />
                             </div>
 
                             <div className="article-content">
@@ -56,16 +56,7 @@ const BlogDetailsContent = (props) => {
 
                                 <h3>{post.title}</h3>
 
-                                <p>Quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quia non numquam eius modi tempora incidunt ut labore et dolore magnam dolor sit amet, consectetur adipisicing.</p>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-
-                                <blockquote>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                                    <cite>Tom Cruise</cite>
-                                </blockquote>
-
-                                <p>Quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quia non numquam eius modi tempora incidunt ut labore et dolore magnam dolor sit amet, consectetur adipisicing.</p>
+                                <ReactMarkdown>{post.node.content}</ReactMarkdown>
 
                                 <ul className="wp-block-gallery columns-3">
                                     <li className="blocks-gallery-item">
