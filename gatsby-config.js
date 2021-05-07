@@ -45,7 +45,10 @@ module.exports = {
           `blog`
         ],
         //If using single types place them in this array.
-        singleTypes: [`contact`],
+        singleTypes: [
+          `contact`,
+          `history`
+        ],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
           identifier: "",

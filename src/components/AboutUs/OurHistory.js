@@ -14,7 +14,7 @@ const OurHistory = () => {
                         <img src={starIcon} alt="banner" /> 
                         Our History
                     </span>
-                    <h2>History Begins in 2010</h2>
+                    <h2>History Begins in 2014</h2>
                 </div>
 
                 <ol className="timeline history-timeline">

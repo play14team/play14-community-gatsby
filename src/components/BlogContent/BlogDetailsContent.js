@@ -2,6 +2,8 @@ import React from 'react'
 import {Link} from 'gatsby'
 import BlogSidebar from './BlogSidebar'
 import ReactMarkdown from 'react-markdown'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
 
 import img4 from '../../assets/images/blog/blog-img4.jpg'
 import img5 from '../../assets/images/blog/blog-img5.jpg'
@@ -12,8 +14,6 @@ import user1 from '../../assets/images/user1.jpg'
 import user2 from '../../assets/images/user2.jpg'
 import user3 from '../../assets/images/user3.jpg'
 import user4 from '../../assets/images/user4.jpg'
-
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const BlogDetailsContent = (props) => {
     const { post } = props
