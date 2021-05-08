@@ -1,17 +1,14 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import {Link, useStaticQuery, graphql} from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import { useStaticQuery, graphql } from "gatsby"
-
-import course1 from '../../assets/images/courses/course1.jpg'
-import user1 from '../../assets/images/user1.jpg'
+import {  } from "gatsby"
 
 const useGetGames = () => {
     const { games } = useStaticQuery(
         graphql`
         query GetGames {
-            games: allStrapiGame {
+            games: allStrapiGame(sort:{fields: name, order:ASC}) {
               totalCount
               nodes {
                 slug
@@ -87,7 +84,7 @@ const GamesCard = () => {
                                         <p>{game.summary}</p>
                                         <ul className="courses-box-footer d-flex justify-content-between align-items-center">
                                             <li>
-                                                <i className='flaticon-agendas'></i> {game.timebox}
+                                                <i className='bx bx-time'></i> {game.timebox}
                                             </li>
                                             <li>
                                                 <i className='flaticon-team'></i> {game.scale}

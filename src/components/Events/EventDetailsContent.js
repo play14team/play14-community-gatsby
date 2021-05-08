@@ -1,7 +1,7 @@
 import React from 'react'
 import UpcomingEventTimer from './UpcomingEventTimer'
 import EventSidebar from './EventSidebar'
-import ReactMarkdown from 'react-markdown'
+import Markdown from "markdown-to-jsx"
 import Moment from 'react-moment';
 import 'moment-timezone';
 
@@ -38,7 +38,7 @@ const EventDetailsContent = (props) => {
                         </div>
 
                         <div className="events-details-desc">
-                            <ReactMarkdown>{event.description}</ReactMarkdown>
+                            <Markdown>{event.description}</Markdown>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-12">

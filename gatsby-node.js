@@ -10,6 +10,11 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
+      games: allStrapiGame {
+        nodes {
+          slug
+        }
+      }
       players: allStrapiPlayer {
         nodes {
           slug
@@ -29,6 +34,16 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`src/templates/event.js`),
       context: {
         slug: evt.slug,
+      },
+    })
+  })
+
+  result.data.games.nodes.forEach(game => {
+    createPage({
+      path: `/games/${game.slug}`,
+      component: path.resolve(`src/templates/game.js`),
+      context: {
+        slug: game.slug,
       },
     })
   })

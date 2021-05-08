@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import BlogSidebar from './BlogSidebar'
-import ReactMarkdown from 'react-markdown'
+import Markdown from "markdown-to-jsx"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
@@ -56,7 +56,7 @@ const BlogDetailsContent = (props) => {
 
                                 <h3>{post.title}</h3>
 
-                                <ReactMarkdown>{post.node.content}</ReactMarkdown>
+                                <Markdown>{post.node.content}</Markdown>
 
                                 <ul className="wp-block-gallery columns-3">
                                     <li className="blocks-gallery-item">

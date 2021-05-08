@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import ReactMarkdown from 'react-markdown'
+import Markdown from "markdown-to-jsx"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Moment from 'react-moment';
 import 'moment-timezone';
@@ -40,7 +40,7 @@ const OurHistoryContent = () => {
                     <h2>{history.beginning}</h2>
                 </div>
 
-                <ReactMarkdown>{history.description}</ReactMarkdown>
+                <Markdown>{history.description}</Markdown>
 
                 <ol className="timeline history-timeline">
                     {

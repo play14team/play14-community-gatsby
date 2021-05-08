@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import ReactMarkdown from 'react-markdown'
+import Markdown from "markdown-to-jsx"
 
 import aboutImage from '../../assets/images/about/about-img5.png'
 import starIcon from '../../assets/images/star-icon.png'
@@ -113,7 +113,7 @@ const AboutUsContent = () => {
                                     {
                                         manifesto.items.map(item => {
                                             return(
-                                                <li><i className="flaticon-tick"></i> <ReactMarkdown>{item.text}</ReactMarkdown></li>
+                                                <li><i className="flaticon-tick"></i> <Markdown>{item.text}</Markdown></li>
                                             )
                                         })
                                     }
@@ -130,7 +130,7 @@ const AboutUsContent = () => {
                                     {
                                         codeOfConduct.items.map(item => {
                                             return(
-                                                <li><i className="flaticon-tick"></i> <ReactMarkdown>{item.text}</ReactMarkdown></li>
+                                                <li><i className="flaticon-tick"></i> <Markdown>{item.text}</Markdown></li>
                                             )
                                         })
                                     }
