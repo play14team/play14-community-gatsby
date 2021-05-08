@@ -11,10 +11,11 @@ const GameDetailsContent = (props) => {
                 <div className="row">
                     <div className="col-lg-8 col-md-12">
                         <div className="services-details-desc">
+
                             <div className="row">
                                 {
                                     game.categories.map(cat =>
-                                            <div className="col-lg-4 col-sm-6 col-md-6">
+                                        <div className="col-lg-4 col-sm-6 col-md-6">
                                                 <div className="single-industries-serve-box">
                                                     <div className="icon">
                                                         <i className={cat.icon}></i>
@@ -23,10 +24,13 @@ const GameDetailsContent = (props) => {
                                                 </div>
                                             </div>
                                         )
-                                }            
+                                    }            
                             </div>
 
-                            <p><strong>{game.summary}</strong></p>
+                            <div className="row">
+                                <h3>Summary</h3>
+                                <p>{game.summary}</p>
+                            </div>
 
                             <div className="row align-items-center">
                                 <div className="col-lg-6 col-md-6">
@@ -71,9 +75,9 @@ const GameDetailsContent = (props) => {
 
                             <hr></hr>
 
-                            <p>
+                            <div className="row">
                                 <Markdown>{game.description}</Markdown>
-                            </p>
+                            </div>
 
                         </div>
                     </div>
