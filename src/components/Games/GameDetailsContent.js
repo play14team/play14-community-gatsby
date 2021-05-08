@@ -73,6 +73,17 @@ const GameDetailsContent = (props) => {
                             </div> 
                             : ''}
 
+                            { game.safety.length > 0 ?
+                            <div className="col-lg-12 col-md-12">
+                                <div className="content">
+                                    <h3>Safety</h3>
+                                    <ul>
+                                        { game.safety.map(s => <li><strong>{s.name}</strong>: {s.value}</li>) }
+                                    </ul>
+                                </div>
+                            </div> 
+                            : ''}
+
                             <hr></hr>
 
                             <div className="row">
@@ -85,6 +96,27 @@ const GameDetailsContent = (props) => {
                     <div className="col-lg-4 col-md-12">
                         <GameSidebar game={game} />
                     </div>
+
+                    {/* <h3>Game metrics</h3>
+                    <div className="col-lg-12 col-md-12">
+                        {
+                            game.metrics.map(metric => {
+                                return (
+                                    <div>
+                                        <div className="side">
+                                            <div>{metric.name}</div>
+                                        </div>
+                                        <div className="middle">
+                                            <div className="bar-container">
+                                                <div className={`bar-${(metric.value/20)}`}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div> */}
+
                 </div>
             </div>
         </section>

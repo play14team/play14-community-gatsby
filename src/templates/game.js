@@ -15,30 +15,38 @@ query GetSingleGame($slug: String) {
     summary
     timebox
     scale
-		description
+    description
     publishdate
-    firstplayed{
+    firstplayed {
       name
     }
-    takeaways{
+    takeaways {
       text
     }
-    materials{
+    materials {
       text
     }
-    preparationSteps{
+    preparationSteps {
       text
     }
     categories {
       name
       icon
     }
-    resources{
+    resources {
       name
-      file{
+      file {
         publicURL
         extension
       }
+    }
+    metrics {
+      name
+      value
+    }
+    safety {
+      name
+      value
     }
     proposedby {
       slug
