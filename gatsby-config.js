@@ -47,7 +47,9 @@ module.exports = {
         //If using single types place them in this array.
         singleTypes: [
           `contact`,
-          `history`
+          `history`,
+          `manifesto`,
+          `code-of-conduct`
         ],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
