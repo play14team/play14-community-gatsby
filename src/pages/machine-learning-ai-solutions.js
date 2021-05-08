@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarTwo from "../components/App/NavbarTwo"
+import Navbar from "../components/App/Navbar"
 import Footer from "../components/App/Footer"
 import Layout from "../components/App/Layout"
 
@@ -19,7 +19,7 @@ import ProjectStartArea from '../components/MachineLearningAISolutions/ProjectSt
 const Home = () => {
     return (
         <Layout>
-            <NavbarTwo />
+            <Navbar />
             <MainBanner />
             <Solutions />
             <AboutUs />

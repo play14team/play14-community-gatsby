@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarThree from "../components/App/NavbarThree"
+import Navbar from "../components/App/Navbar"
 import Footer from "../components/App/Footer"
 import Layout from "../components/App/Layout"
 import MainBanner from '../components/DataAnalyticsMLConsulting/MainBanner';
@@ -20,7 +20,7 @@ import StartProjectTwo from '../components/Common/StartProjectTwo';
 const Home = () => {
     return (
         <Layout>
-            <NavbarThree />
+            <Navbar />
             <MainBanner />
             <OurSolutions />
             <AboutArea />
