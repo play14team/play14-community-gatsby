@@ -1,8 +1,10 @@
 import React from 'react'
-import EventDescription from './EventDescription'
-import EventPlayers from './EventPlayers'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import UpcomingEventTimer from './UpcomingEventTimer'
+import EventDescription from './EventDescription'
+import EventPlayers from './EventPlayers'
+import EventTimetable from './EventTimetable'
+import EventPhotoGallery from './EventPhotoGallery'
 
 const EventDetailsContent = (props) => {
     const { event } = props
@@ -53,7 +55,7 @@ const EventDetailsContent = (props) => {
                             <li
                                 onClick={(e) => openTabSection(e, 'tab3')}
                             >
-                                Time table
+                                Timing
                             </li>
                             <li
                                 onClick={(e) => openTabSection(e, 'tab4')}
@@ -73,10 +75,10 @@ const EventDetailsContent = (props) => {
                                 <EventPlayers players={event.players} name="Players" />
                             </div>
                             <div id="tab3" className="tab-pane tabs_item">
-                                <h3>Comming soon</h3>
+                                <EventTimetable timetable={event.timetable} />
                             </div>
                             <div id="tab4" className="tab-pane tabs_item">
-                                <h3>Comming soon</h3>
+                                <EventPhotoGallery photos={event.images} />
                             </div>
                         </div>
                 </div>

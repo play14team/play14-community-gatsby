@@ -40,16 +40,25 @@ query GetSingleEvent($slug: String) {
         }
       }
     }
+    timetable {
+      day
+      description
+      timeslots {
+        time
+        description
+      }
+    }
     defaultImage {
       childImageSharp {
-          gatsbyImageData(
-              width: 2048
-              height: 400
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-          )
-        }
+        gatsbyImageData(
+          width: 2048
+          height: 400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
     }
+
     images {
       formats {
         small {
