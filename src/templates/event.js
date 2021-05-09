@@ -13,7 +13,6 @@ query GetSingleEvent($slug: String) {
   event: strapiEvent(slug: { eq: $slug }) {
     slug
     name
-    date
     start
     end
     status

@@ -6,7 +6,7 @@ import payment3 from '../../assets/images/payment/payment3.png'
 
 const EventSidebar = ( props ) => {
     const { event } = props
-    if (event.status === "OpenForRegistration") {
+    if (event.status === "Open") {
         return (
             <div className="events-details-info">
                 <ul className="info">

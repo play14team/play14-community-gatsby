@@ -4,8 +4,8 @@ import EventSidebar from './EventSidebar'
 import Markdown from "markdown-to-jsx"
 import Moment from 'react-moment';
 import 'moment-timezone';
-
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import EventDate from './EventDate'
 
 const EventDetailsContent = (props) => {
     const { event } = props
@@ -23,12 +23,16 @@ const EventDetailsContent = (props) => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 col-md-12">
-                        <h3>{event.date}</h3>
+                        <h3><EventDate start={event.start} end={event.end} /></h3>
                         <div className="events-details-header">
                             <ul>
-                                <li><i className='bx bx-calendar'></i><Moment format="MMM DD, YYYY">{event.start}</Moment> at <Moment format="hh:mm">{event.start}</Moment></li>
-                                <li><i className='bx bx-time'></i><Moment format="MMM DD, YYYY">{event.end}</Moment>at <Moment format="hh:mm">{event.end}</Moment></li>
+                                <li><i className='bx bx-time'></i>Starts at <Moment format="HH:mm on MMM. DD">{event.start}</Moment></li>
+                                <li><i className='bx bx-time-five'></i>Ends at <Moment format="HH:mm on MMM. DD">{event.end}</Moment></li>
+                            </ul>
+                            <ul>
                                 <li><i className='bx bx-building'></i>{event.venue.name}</li>
+                                </ul>
+                            <ul>
                                 <li><i className='bx bx-map'></i>{number} {street}, {postalCode} {city}, {country} </li>
                             </ul>
                         </div>

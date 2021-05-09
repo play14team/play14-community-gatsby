@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
 import { useStaticQuery, graphql } from "gatsby"
+import EventDate from "./EventDate"
 
 const useGetEvents = () => {
     const { events } = useStaticQuery(
@@ -12,7 +12,8 @@ const useGetEvents = () => {
             nodes {
             slug
             name
-            date
+            start
+            end
             location {
                 name
             }
@@ -73,7 +74,9 @@ const EventsCard = () => {
                                         <Link to={event.slug} className="d-block">
                                             <GatsbyImage image={getImage(event.defaultImage)} alt={event.name} />
                                         </Link>
-                                        <span className="date">{event.date}</span>
+                                        <span className="date">
+                                            <EventDate start={event.start} end={event.end} />
+                                        </span>
                                         <span className="status"><i className={icons[event.status]}></i> {event.status}</span>
                                     </div>
 
