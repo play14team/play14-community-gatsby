@@ -6,7 +6,6 @@ import Navbar from "../components/App/Navbar"
 import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
 import EventDetailsContent from '../components/Events/EventDetailsContent'
-import EventPlayers from '../components/Events/EventPlayers'
 
 export const query = graphql`
 query GetSingleEvent($slug: String) {
@@ -135,9 +134,6 @@ const Event = ({ data }) => {
           activePageText={data.event.name} 
       />
       <EventDetailsContent event={data.event} />
-      <EventPlayers players={data.event.hosts} name="Hosts" />
-      <EventPlayers players={data.event.mentors} name="Mentors" />
-      <EventPlayers players={data.event.players} name="Players" />
       <Footer />
   </Layout>
 )
