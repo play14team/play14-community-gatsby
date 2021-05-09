@@ -55,6 +55,12 @@ const useGetEvents = () => {
 
 const EventsCard = () => {
     const events = useGetEvents()
+    const icons = {
+        "Announced" : "bx bx-calendar-exclamation",
+        "Open" : "bx bx-calendar-plus",
+        "Over" : "bx bx-calendar-check",
+        "Canceled" : "bx bx-calendar-x",
+    }
     return (
         <div className="events-area pt-100 pb-70">
             <div className="container">
@@ -68,6 +74,7 @@ const EventsCard = () => {
                                             <GatsbyImage image={getImage(event.defaultImage)} alt={event.name} />
                                         </Link>
                                         <span className="date">{event.date}</span>
+                                        <span className="status"><i className={icons[event.status]}></i> {event.status}</span>
                                     </div>
 
                                     <div className="content">
@@ -77,10 +84,7 @@ const EventsCard = () => {
                                             </Link>
                                         </h3>
                                         <span className="location">
-                                            <i className="bx bx-map"></i> {event.location.name}, {event.venue.name}
-                                        </span>
-                                        <span className="location">
-                                            <i className="bx bx-chevrons-right"></i> {event.status}
+                                            <i className="bx bx-map"></i> {event.location ? `${event.location.name}, ${event.venue.name}` : "To be defined"}
                                         </span>
                                     </div>
                                 </div>

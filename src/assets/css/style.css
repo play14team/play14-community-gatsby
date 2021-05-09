@@ -8376,6 +8376,19 @@ Events Area CSS
   font-weight: 700;
 }
 
+.single-events-box .image .status {
+  position: absolute;
+  left: 0;
+  top:0;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #ff5d22;
+  padding: 8px 20px;
+  border-radius: 0 0 5px 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
 .single-events-box .image .date::before {
   content: '';
   position: absolute;
