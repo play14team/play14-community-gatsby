@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Moment from 'react-moment'
-import 'moment-timezone'
 
 const EventTimetable = (props) => {
     const { timetable } = props
@@ -13,14 +11,15 @@ const EventTimetable = (props) => {
             { 
                 timetable.map(day => {
                     return (
-                        <div>
+                        <div className="container">
                             <h3>{day.day}</h3>
-                            {/* <span>{day.description}</span> */}
+                            {day.description}
                             <ul>
                                 {
                                     day.timeslots.map(slot => {
-                                        console.log(slot.time)
-                                        const time = slot.time.toString().substring(1, 5).padStart(5, '0')
+                                        const timeString = slot.time.toString()
+                                        const index = timeString.indexOf('.') - 3
+                                        const time = timeString.substring(0, index)
 
                                         return (
                                             <li>
@@ -30,8 +29,8 @@ const EventTimetable = (props) => {
                                                 >
                                                     <span className="courses-name">{slot.description}</span>
                                                     <div className="courses-meta">
+                                                        <span className="status"><i className='bx bx-alarm'></i></span>
                                                         <span className="duration">{time}</span>
-                                                        <span className="status locked"><i className='bx bx-alarm'></i></span>
                                                     </div>
                                                 </Link>
                                             </li>
@@ -39,6 +38,7 @@ const EventTimetable = (props) => {
                                     })
                                 }
                             </ul>
+                            <br/>
                         </div>
                     )}
                 )
