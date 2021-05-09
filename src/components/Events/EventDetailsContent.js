@@ -33,9 +33,7 @@ const EventDetailsContent = (props) => {
 
                 <div className="events-details-image">
                     <GatsbyImage image={getImage(event.defaultImage)} alt={event.name} />
-                    {
-                        new Date(event.start) > new Date() ? <UpcomingEventTimer date={event.start} /> : ''
-                    }
+                    { new Date(event.start) > new Date() ? <UpcomingEventTimer date={event.start} /> : ''}
                 </div>
 
                 <div className="container">
@@ -78,7 +76,7 @@ const EventDetailsContent = (props) => {
                                 <EventTimetable timetable={event.timetable} />
                             </div>
                             <div id="tab4" className="tab-pane tabs_item">
-                                <EventPhotoGallery photos={event.images} />
+                                <EventPhotoGallery images={event.images} />
                             </div>
                         </div>
                 </div>

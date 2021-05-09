@@ -4,8 +4,6 @@ import { Link } from 'gatsby'
 const EventTimetable = (props) => {
     const { timetable } = props
 
-    console.log(timetable)
-
     return (
         <div className="courses-curriculum">
             { 

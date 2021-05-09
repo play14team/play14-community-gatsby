@@ -1,10 +1,11 @@
 import React from 'react'
+import PhotoGallery from '../Photos/PhotoGallery'
 
 const EventPhotoGallery = (props) => {
-    const { photos } = props
+    const { images } = props
 
     return (
-        <h3>Comming soon</h3>
+        <PhotoGallery images={images} />
     )
 }
 

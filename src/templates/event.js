@@ -29,7 +29,7 @@ query GetSingleEvent($slug: String) {
       images {
         formats {
           small {
-            childrenImageSharp {
+            childImageSharp {
               gatsbyImageData(
                 width: 380
                 placeholder: BLURRED
@@ -62,7 +62,7 @@ query GetSingleEvent($slug: String) {
     images {
       formats {
         small {
-          childrenImageSharp {
+          childImageSharp {
             gatsbyImageData(
               width: 380
               placeholder: BLURRED
