@@ -3,8 +3,8 @@ import Layout from "../components/App/Layout"
 import Navbar from "../components/App/Navbar"
 import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
-import LoginForm from '../components/ProfileAuthentication.js/LoginForm'
-import RegisterForm from '../components/ProfileAuthentication.js/RegisterForm'
+import LoginForm from '../components/ProfileAuthentication/LoginForm'
+import RegisterForm from '../components/ProfileAuthentication/RegisterForm'
 
 const ProfileAuthentication = () => {
     return (
