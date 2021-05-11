@@ -37,7 +37,7 @@ const CaseStudiesSidebar = (props) => {
                 </ul>
                 <br></br>
                 <div className="events-details-location">
-                    <iframe src={player.embeddedMapUrl}></iframe>
+                    <iframe title="Map" src={player.embeddedMapUrl}></iframe>
                 </div>
             </div>
         </div>

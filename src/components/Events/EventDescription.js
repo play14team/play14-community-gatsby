@@ -39,7 +39,7 @@ const EventDescription = (props) => {
                         </div>
                         { event.venue ?
                             <div className="events-details-location">
-                                <iframe src={event.venue.embeddedMapUrl}></iframe>
+                                <iframe title="Map" src={event.venue.embeddedMapUrl}></iframe>
                             </div>
                           : ''
                         }

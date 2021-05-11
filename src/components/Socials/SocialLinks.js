@@ -1,6 +1,4 @@
-import { checkPropTypes } from 'prop-types'
 import React from 'react'
-import { useRecoilBridgeAcrossReactRoots_UNSTABLE } from 'recoil'
 
 const SocialLinks = (props) => {
     const {socialNetworks, className}  = props

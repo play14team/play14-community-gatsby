@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Moment from 'react-moment'
 
@@ -92,7 +91,7 @@ const GameSidebar = (props) => {
                                 const icon = `bx bxs-file-${r.file.extension}`
                                 return(
                                     <li>
-                                        <a href={r.file.publicURL} target="_blank">
+                                        <a href={r.file.publicURL} target="_blank" rel="noreferrer">
                                             {r.name} <i className={icon}></i>
                                         </a>
                                     </li>

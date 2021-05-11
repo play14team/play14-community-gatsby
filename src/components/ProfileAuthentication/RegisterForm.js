@@ -7,18 +7,18 @@ const RegisterForm = () => {
 
             <form>
                 <div className="form-group">
-                    <label>Username</label>
-                    <input type="text" className="form-control" placeholder="Username or email" />
+                    <label htmlFor="userName">Username</label>
+                    <input id="userName" type="text" className="form-control" placeholder="Username or email" />
                 </div>
 
                 <div className="form-group">
-                    <label>Email</label>
-                    <input type="email" className="form-control" placeholder="Username or email" />
+                    <label htmlFor="email">Email</label>
+                    <input id="email" type="email" className="form-control" placeholder="Username or email" />
                 </div>
 
                 <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Password" />
+                    <label htmlFor="password">Password</label>
+                    <input id="password" type="password" className="form-control" placeholder="Password" />
                 </div>
 
                 <p className="description">The password should be at least eight characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! " ? $ % ^ & )</p>

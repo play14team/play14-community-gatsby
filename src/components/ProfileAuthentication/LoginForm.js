@@ -8,20 +8,20 @@ const LoginForm = () => {
 
             <form>
                 <div className="form-group">
-                    <label>Username or email</label>
-                    <input type="text" className="form-control" placeholder="Username or email" />
+                    <label htmlFor="username">Username or email</label>
+                    <input id="username" type="text" className="form-control" placeholder="Username or email" />
                 </div>
 
                 <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Password" />
+                    <label htmlFor="password">Password</label>
+                    <input id="password" type="password" className="form-control" placeholder="Password" />
                 </div>
 
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-6 col-sm-6 remember-me-wrap">
                         <p>
-                            <input type="checkbox" id="test2" />
-                            <label>Remember me</label>
+                            <input type="checkbox" id="rememberme" />
+                            <label htmlFor="rememberme">Remember me</label>
                         </p>
                     </div>
 
