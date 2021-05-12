@@ -8,21 +8,21 @@ const EventDate = (props) => {
 
     if (startDate.getMonth() === endDate.getMonth())
         return (
-            <text>
+            <span>
                 <Moment format="MMM. DD">{start}</Moment>-<Moment format="DD">{end}</Moment>, <Moment format="YYYY">{start}</Moment>
-            </text>
+            </span>
         )
     else if (startDate.getFullYear() === endDate.getFullYear())
         return (
-            <text>
+            <span>
                 <Moment format="MMM. DD">{start}</Moment> - <Moment format="MMM. DD">{end}</Moment>, <Moment format="YYYY">{start}</Moment>
-            </text>
+            </span>
         )
     else
         return (
-            <text>
+            <span>
                 <Moment format="MMM. DD, YYYY">{start}</Moment> - <Moment format="MMM. DD, YYYY">{end}</Moment>
-            </text>
+            </span>
         )
 }
 

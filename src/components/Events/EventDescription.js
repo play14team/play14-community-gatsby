@@ -46,17 +46,17 @@ const EventDescription = (props) => {
                         }
 
                         {
-                            event.content.map(c => {
+                            event.content.map((c, i) => {
                                 if (c.markdown) {
                                     return (
-                                        <div key="content" className="events-details-desc">
-                                            <Markdown>{c.markdown}</Markdown>
+                                        <div className="events-details-desc">
+                                            <Markdown key={`markdown${i}`} >{c.markdown}</Markdown>
                                         </div>
                                     )
                                 }
                                 if (c.embeddedVideo) {
                                     return (
-                                        <div key="video" className="events-details-desc">
+                                        <div className="events-details-desc">
                                             <iframe src={c.embeddedVideo} title="Video" width="100%" height="480" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     )
@@ -64,10 +64,10 @@ const EventDescription = (props) => {
                                 if (c.slides)
                                 {
                                     return (
-                                        <div key="slides" className="events-details-image">
+                                        <div className="events-details-image">
                                             {
-                                                c.slides.map(slide => {
-                                                    return (<GatsbyImage image={getImage(slide.file)} alt={slide.name} />)       
+                                                c.slides.map((slide, i) => {
+                                                    return (<GatsbyImage key={`image${i}`} image={getImage(slide.file)} alt={slide.file.name} />)       
                                                 })
                                             }
                                         </div>

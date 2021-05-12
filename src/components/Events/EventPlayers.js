@@ -19,10 +19,10 @@ const EventPlayers = (props) => {
                     </div>
                     <div className="row">
                     {
-                        players.map(player => {
+                        players.map((player, i) => {
                             const url = `/players/${player.slug}`
                             return (
-                                <div className="col-lg-4 col-sm-6 col-md-6">
+                                <div key={`col${i}`} className="col-lg-4 col-sm-6 col-md-6">
                                     <div className="single-scientist-item-box">
                                         <div className="image">
                                             <Link to={url}>

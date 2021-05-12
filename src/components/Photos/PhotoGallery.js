@@ -8,19 +8,17 @@ const PhotoGallery = (props) => {
     const [isOpenImage, setIsOpenImage] = React.useState(false);
     const {images} = props
 
-    console.log(images)
-
     return (
         <div className="gallery-area pt-100 pb-70">
             <div className="container">
                 <div className="row">
                     {
-                        images.map(image => {
-                            console.log(image)
+                        images.map((image, i) => {
                             return (
-                                <div className="col-lg-4 col-md-6 col-sm-6">
-                                    <div className="single-gallery-item">
+                                <div key={`col${i}`} className="col-lg-4 col-md-6 col-sm-6">
+                                    <div key={`item${i}`} className="single-gallery-item">
                                         <Link 
+                                            key={`link${i}`}
                                             to="#"
                                             onClick={e => {
                                                 e.preventDefault(); 
@@ -28,7 +26,7 @@ const PhotoGallery = (props) => {
                                                 setPhotoIndex(0);}
                                             }
                                         >
-                                            <GatsbyImage image={getImage(image)} />
+                                            <GatsbyImage key={`image${i}`} image={getImage(image)} alt={image.name} />
                                         </Link>
                                     </div>
                                 </div>
