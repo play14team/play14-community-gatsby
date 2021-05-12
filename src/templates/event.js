@@ -15,7 +15,6 @@ query GetSingleEvent($slug: String) {
     start
     end
     status
-    description
     venue {
       name
       address {
@@ -56,20 +55,6 @@ query GetSingleEvent($slug: String) {
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
-      }
-    }
-
-    images {
-      formats {
-        small {
-          childImageSharp {
-            gatsbyImageData(
-              width: 380
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
-          }
-        }
       }
     }
     hosts {
@@ -125,6 +110,22 @@ query GetSingleEvent($slug: String) {
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
           )
+        }
+      }
+    }
+    content {
+      embeddedVideo
+      markdown
+      slides {
+        file {
+          name
+          childImageSharp {
+            gatsbyImageData(
+              width: 500
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
         }
       }
     }

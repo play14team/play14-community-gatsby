@@ -69,31 +69,3 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
 }
-
-exports.onCreateNode = async ({ node, actions, store, cache, createNodeId, }) => {
-  const { createNode } = actions
-  
-  let multipleImages = node.images
-
-  if (multipleImages) {
-    if (multipleImages.length > 0) {
-      multipleImages.forEach(el => console.log(el))
-      const images = await Promise.all(
-        multipleImages.map(el =>
-          createRemoteFileNode({
-            url: `${process.env.GATSBY_API_URL}/${el.url}`,
-            parentNodeId: node.id,
-            store,
-            cache,
-            createNode,
-            createNodeId,
-          })
-        )
-      )
-   
-     multipleImages.forEach((image, i) => {
-        image.localFile___NODE = images[i].id
-      })
-    }
-  }
-}

@@ -2,6 +2,7 @@ import React from 'react'
 import EventSidebar from './EventSidebar'
 import Markdown from "markdown-to-jsx"
 import Moment from 'react-moment';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import 'moment-timezone';
 import EventDate from './EventDate'
 
@@ -43,12 +44,38 @@ const EventDescription = (props) => {
                             </div>
                           : ''
                         }
-                        { event.description ?
-                            <div className="events-details-desc">
-                                <Markdown>{event.description}</Markdown>
-                            </div>
-                          : ''
+
+                        {
+                            event.content.map(c => {
+                                if (c.markdown) {
+                                    return (
+                                        <div key="content" className="events-details-desc">
+                                            <Markdown>{c.markdown}</Markdown>
+                                        </div>
+                                    )
+                                }
+                                if (c.embeddedVideo) {
+                                    return (
+                                        <div key="video" className="events-details-desc">
+                                            <iframe src={c.embeddedVideo} title="Video" width="100%" height="480" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    )
+                                }
+                                if (c.slides)
+                                {
+                                    return (
+                                        <div key="slides" className="events-details-image">
+                                            {
+                                                c.slides.map(slide => {
+                                                    return (<GatsbyImage image={getImage(slide.file)} alt={slide.name} />)       
+                                                })
+                                            }
+                                        </div>
+                                    )
+                                }
+                            })
                         }
+
                     </div>
                     <div className="col-lg-4 col-md-12">
                         <EventSidebar event={event} />

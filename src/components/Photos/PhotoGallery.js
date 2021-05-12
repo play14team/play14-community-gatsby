@@ -6,7 +6,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const PhotoGallery = (props) => {
     const [photoIndex, setPhotoIndex] = React.useState(0);
     const [isOpenImage, setIsOpenImage] = React.useState(false);
-    const images = props.images.map(i => i.formats.small)
+    const {images} = props
+
     console.log(images)
 
     return (
@@ -15,6 +16,7 @@ const PhotoGallery = (props) => {
                 <div className="row">
                     {
                         images.map(image => {
+                            console.log(image)
                             return (
                                 <div className="col-lg-4 col-md-6 col-sm-6">
                                     <div className="single-gallery-item">
@@ -39,9 +41,9 @@ const PhotoGallery = (props) => {
             {/* Lightbox */}
             {isOpenImage && (
                 <Lightbox
-                    mainSrc={images[photoIndex]}
-                    nextSrc={images[(photoIndex + 1) % images.length]}
-                    prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                    mainSrc={images[photoIndex].childImageSharp.gatsbyImageData.images.fallback.src}
+                    nextSrc={images[(photoIndex + 1) % images.length].childImageSharp.gatsbyImageData.images.fallback.src}
+                    prevSrc={images[(photoIndex + images.length - 1) % images.length].childImageSharp.gatsbyImageData.images.fallback.src}
                     onCloseRequest={() => setIsOpenImage(false)}
                     onMovePrevRequest={() =>
                         setPhotoIndex((photoIndex + images.length - 1) % images.length)

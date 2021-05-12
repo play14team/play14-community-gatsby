@@ -8,46 +8,30 @@ const useGetEvents = () => {
     const { events } = useStaticQuery(
         graphql`
         query GetEvents {
-        events: allStrapiEvent( sort: {fields:start, order: DESC} ) {
-            nodes {
-            slug
-            name
-            start
-            end
-            location {
-                name
-            }
-            venue {
-                name
-            }
-            status
-            defaultImage {
-                childImageSharp {
-                    gatsbyImageData(
-                        width: 380
-                        placeholder: BLURRED
-                        formats: [AUTO, WEBP, AVIF]
-                    )
-
-                }
-            }
-            images {
-                name
-                alternativeText
-                formats {
-                small {
-                    childImageSharp {
-                        gatsbyImageData(
-                            width: 380
-                            placeholder: BLURRED
-                            formats: [AUTO, WEBP, AVIF]
-                        )
+            events: allStrapiEvent( sort: {fields:start, order: DESC} ) {
+                nodes {
+                    slug
+                    name
+                    start
+                    end
+                    location {
+                        name
+                    }
+                    venue {
+                        name
+                    }
+                    status
+                    defaultImage {
+                        childImageSharp {
+                            gatsbyImageData(
+                                width: 380
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP, AVIF]
+                            )
+                        }
                     }
                 }
-                }
             }
-            }
-        }
         }
     `
     )

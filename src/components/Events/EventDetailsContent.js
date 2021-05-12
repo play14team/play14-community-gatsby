@@ -65,7 +65,6 @@ const EventDetailsContent = (props) => {
                         <div className="tab-content">
                             <div id="tab1" className="tab-pane tabs_item">
                                 <EventDescription event={event} />
-
                             </div>
                             <div id="tab2" className="tab-pane tabs_item">
                                 <EventPlayers players={event.hosts} name="Hosts" />
@@ -76,7 +75,7 @@ const EventDetailsContent = (props) => {
                                 <EventTimetable timetable={event.timetable} />
                             </div>
                             <div id="tab4" className="tab-pane tabs_item">
-                                <EventPhotoGallery images={event.images} />
+                                <EventPhotoGallery event={event} />
                             </div>
                         </div>
                 </div>
