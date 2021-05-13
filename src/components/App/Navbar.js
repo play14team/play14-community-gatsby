@@ -62,7 +62,7 @@ const Navbar = () => {
 
                                     {/* About Us */}
                                     <NavItem name="About Us" to="#">
-                                            <NavItem name="About Us" to="/about-us" setCollapsed={setCollapsed} />
+                                            <NavItem name="About" to="/about-us" setCollapsed={setCollapsed} />
                                             <NavItem name="History" to="/history" setCollapsed={setCollapsed} />
                                             <NavItem name="Gallery" to="/gallery" setCollapsed={setCollapsed} />
                                             <NavItem name="FAQ" to="/faq" setCollapsed={setCollapsed} />
