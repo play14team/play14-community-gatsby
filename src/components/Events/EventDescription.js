@@ -73,6 +73,7 @@ const EventDescription = (props) => {
                                         </div>
                                     )
                                 }
+                                return ('')
                             })
                         }
 

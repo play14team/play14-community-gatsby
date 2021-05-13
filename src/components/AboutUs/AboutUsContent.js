@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Markdown from "markdown-to-jsx"
 
 import aboutImage from '../../assets/images/about/about-img5.png'

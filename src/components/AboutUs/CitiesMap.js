@@ -14,7 +14,7 @@ const CitiesMap = () => {
                                 We are everywhere
                             </span>
                             <h2>#play14 cities</h2>
-                            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1mBESZcyTHMeyNmQOEPH2YK8TgvOaFBEa" width="100%" height="480"></iframe>
+                            <iframe title="#play14 cities" src="https://www.google.com/maps/d/u/0/embed?mid=1mBESZcyTHMeyNmQOEPH2YK8TgvOaFBEa" width="100%" height="480"></iframe>
                         </div>
                     </div>
                 </div>
