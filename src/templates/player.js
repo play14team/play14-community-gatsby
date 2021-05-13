@@ -7,34 +7,6 @@ import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
 import PlayerDetailsContent from "../components/Players/PlayerDetailsContent"
 
-export const query = graphql`
-  query GetSinglePlayer($slug: String) {
-    player: strapiPlayer(slug: { eq: $slug }) {
-      name
-      role
-      headline
-      biography
-      company
-      website
-      city
-      embeddedMapUrl
-      socialNetworks {
-        url
-        type
-      }
-      avatar {
-        childImageSharp {
-          gatsbyImageData(
-            width: 500
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-          )
-        }
-      }
-    }
-  }
-`
-
 const Player = ({ data }) => {
   const { player } = data
   return (
@@ -53,3 +25,27 @@ const Player = ({ data }) => {
 }
 
 export default Player
+
+export const query = graphql`
+  query GetSinglePlayer($slug: String) {
+    player: strapiPlayer(slug: { eq: $slug }) {
+      name
+      role
+      headline
+      biography
+      company
+      website
+      city
+      embeddedMapUrl
+      socialNetworks {
+        url
+        type
+      }
+      avatar {
+        childImageSharp {
+          gatsbyImageData(width: 500)
+        }
+      }
+    }
+  }
+`

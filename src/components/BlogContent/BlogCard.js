@@ -6,45 +6,6 @@ import 'moment-timezone';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 
-const useGetBlogPosts = () => {
-    const { posts } = useStaticQuery(
-        graphql`
-        query GetBlogPosts {
-            posts: allStrapiBlog(sort: { fields: published_at, order: DESC }) {
-              nodes {
-                slug
-                title
-                content
-                published_at
-                author {
-                  name
-                  avatar {
-                    childImageSharp {
-                      gatsbyImageData(
-                        width: 50
-                        placeholder: BLURRED
-                        formats: [AUTO, WEBP, AVIF]
-                      )
-                    }
-                  }
-                }
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      width: 350
-                      placeholder: BLURRED
-                      formats: [AUTO, WEBP, AVIF]
-                    )
-                  }
-                }
-              }
-            }
-          }
-        `
-    )
-    return posts.nodes
-}
-
 const BlogCard = () => {
     const posts  = useGetBlogPosts()
     return (
@@ -115,3 +76,35 @@ const BlogCard = () => {
 }
 
 export default BlogCard
+
+const useGetBlogPosts = () => {
+    const { posts } = useStaticQuery(
+        graphql`
+        query GetBlogPosts {
+            posts: allStrapiBlog(sort: { fields: published_at, order: DESC }) {
+              nodes {
+                slug
+                title
+                content
+                published_at
+                author {
+                  name
+                  avatar {
+                    childImageSharp {
+                      gatsbyImageData(width: 50)
+                    }
+                  }
+                }
+                image {
+                  childImageSharp {
+                    gatsbyImageData(width: 380)
+                  }
+                }
+              }
+            }
+          }
+        `
+    )
+    return posts.nodes
+}
+

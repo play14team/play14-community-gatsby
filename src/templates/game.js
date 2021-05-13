@@ -7,6 +7,24 @@ import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
 import GameDetailsContent from '../components/Games/GameDetailsContent'
 
+const Game = ({ data }) => {
+  return (
+    <Layout title={data.game.name}>
+      <Navbar />
+      <PageBanner
+          pageTitle={data.game.name} 
+          homePageText="Games" 
+          homePageUrl="/games" 
+          activePageText={data.game.name} 
+      />
+      <GameDetailsContent game={data.game} />
+      <Footer />
+  </Layout>
+)
+}
+
+export default Game
+
 export const query = graphql`
 query GetSingleGame($slug: String) {
   game: strapiGame(slug: { eq: $slug }) {
@@ -53,7 +71,7 @@ query GetSingleGame($slug: String) {
       name
       avatar {
         childImageSharp {
-          gatsbyImageData(width: 35, placeholder: BLURRED, formats: AUTO)
+          gatsbyImageData(width: 35)
         }
       }
     }
@@ -62,33 +80,15 @@ query GetSingleGame($slug: String) {
       name
       avatar {
         childImageSharp {
-          gatsbyImageData(width: 35, placeholder: BLURRED, formats: AUTO)
+          gatsbyImageData(width: 35)
         }
       }
     }
     defaultImage {
       childImageSharp {
-        gatsbyImageData(width: 400, placeholder: BLURRED, formats: AUTO)
+        gatsbyImageData(width: 400)
       }
     }
   }
 }
 `
-
-const Game = ({ data }) => {
-  return (
-    <Layout title={data.game.name}>
-      <Navbar />
-      <PageBanner
-          pageTitle={data.game.name} 
-          homePageText="Games" 
-          homePageUrl="/games" 
-          activePageText={data.game.name} 
-      />
-      <GameDetailsContent game={data.game} />
-      <Footer />
-  </Layout>
-)
-}
-
-export default Game

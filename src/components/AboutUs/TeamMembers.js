@@ -4,6 +4,31 @@ import Players from '../Players/Players'
 
 import starIcon from '../../assets/images/star-icon.png'
 
+
+const TeamMembers = (props) => {
+    const { founders, mentors } = useStaticQuery(query)
+
+    return (
+        <section className="scientist-area bg-color pb-70">
+            <div className="container">
+                <div className="section-title">
+                    <span className="sub-title">
+                        <img src={starIcon} alt="about" /> 
+                        Team Members
+                    </span>
+                    <h2>Meet the team</h2>
+                </div>
+
+                <Players players={founders.nodes} name="Founders" />
+                <Players players={mentors.nodes} name="Mentors" />
+                
+            </div>
+        </section>
+    )
+}
+
+export default TeamMembers
+
 const query = graphql`
 query GetTeamMembers {
     founders : allStrapiPlayer (  filter : { role : { eq : "Founder" } }, sort : {  fields : name, order : ASC } ) {
@@ -33,36 +58,8 @@ query GetTeamMembers {
       }
       avatar {
         childImageSharp {
-          gatsbyImageData(
-            width: 500
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-          )
+          gatsbyImageData(width: 500)
         }
       }
   }
   `
-
-const TeamMembers = (props) => {
-    const { founders, mentors } = useStaticQuery(query)
-
-    return (
-        <section className="scientist-area bg-color pb-70">
-            <div className="container">
-                <div className="section-title">
-                    <span className="sub-title">
-                        <img src={starIcon} alt="about" /> 
-                        Team Members
-                    </span>
-                    <h2>Meet the team</h2>
-                </div>
-
-                <Players players={founders.nodes} name="Founders" />
-                <Players players={mentors.nodes} name="Mentors" />
-                
-            </div>
-        </section>
-    )
-}
-
-export default TeamMembers

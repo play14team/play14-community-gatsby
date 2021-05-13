@@ -5,33 +5,6 @@ import footerMap from "../../assets/images/footer-map.png"
 import SocialLinks from "../Socials/SocialLinks"
 import { useStaticQuery, graphql } from "gatsby"
 
-const useContact = () => {
-    const { contacts } = useStaticQuery(
-      graphql`
-        query {
-          contacts : strapiContact {
-            name
-            email
-            shortDescription
-            socialNetworks {
-              type
-              url
-            }
-            address {
-              number
-              street
-              postalCode
-              city
-              country
-            }
-          }
-        }
-      `
-    )
-  
-    return contacts
-}
-
 const Footer = () => {
 
     const currentYear = new Date().getFullYear();
@@ -73,13 +46,8 @@ const Footer = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/blog">
-                                        Blog
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/contact">
-                                        Contact
+                                    <Link to="/players">
+                                        Players
                                     </Link>
                                 </li>
                             </ul>
@@ -92,13 +60,13 @@ const Footer = () => {
 
                             <ul className="footer-links-list">
                                 <li>
-                                    <Link to="/players">
-                                        Players
+                                    <Link to="/games">
+                                        Games
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/games">
-                                        Games
+                                    <Link to="/blog">
+                                        Blog
                                     </Link>
                                 </li>
                                 <li>
@@ -123,9 +91,18 @@ const Footer = () => {
                                     <i className='bx bx-envelope'></i>
                                     <a href={"mailto:" + contacts.email}>{contacts.email}</a>
                                 </li>
+                                <li>
+                                    <i className='bx bx-news'></i> 
+                                    <a href={contacts.newsletter} target="_blank" rel="noreferrer">Newsletter</a>
+                                </li>
+                                <li>
+                                    <i className='bx bxl-slack'></i>
+                                    <a href={contacts.slack} target="_blank" rel="noreferrer">Slack</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
+
                 </div>
 
                 <div className="footer-bottom-area">
@@ -159,4 +136,33 @@ const Footer = () => {
     );
 }
 
-export default Footer;
+export default Footer
+
+const useContact = () => {
+    const { contacts } = useStaticQuery(
+      graphql`
+        query {
+          contacts : strapiContact {
+            name
+            email
+            shortDescription
+            socialNetworks {
+              type
+              url
+            }
+            address {
+              number
+              street
+              postalCode
+              city
+              country
+            }
+            slack
+            newsletter
+          }
+        }
+      `
+    )
+  
+    return contacts
+}

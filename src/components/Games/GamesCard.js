@@ -1,46 +1,7 @@
 import React from 'react'
 import {Link, useStaticQuery, graphql} from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
 import {  } from "gatsby"
-
-const useGetGames = () => {
-    const { games } = useStaticQuery(
-        graphql`
-        query GetGames {
-            games: allStrapiGame(sort:{fields: name, order:ASC}) {
-              totalCount
-              nodes {
-                slug
-                name
-                summary
-                timebox
-                scale
-                categories {
-                  name
-                }
-                proposedby {
-                  slug
-                  name
-                  avatar {
-                    childImageSharp {
-                      gatsbyImageData(width: 35, placeholder: BLURRED, formats: AUTO)
-                    }
-                  }
-                }
-                defaultImage {
-                    childImageSharp {
-                    gatsbyImageData(width: 400, placeholder: BLURRED, formats: AUTO)
-                    }
-               }
-              }
-            }
-          }
-        `
-    )
-    return games.nodes
-}
-
 
 const GamesCard = () => {
     const games = useGetGames()
@@ -101,4 +62,42 @@ const GamesCard = () => {
     )
 }
 
-export default GamesCard;
+export default GamesCard
+
+const useGetGames = () => {
+    const { games } = useStaticQuery(
+        graphql`
+        query GetGames {
+            games: allStrapiGame(sort:{fields: name, order:ASC}) {
+              totalCount
+              nodes {
+                slug
+                name
+                summary
+                timebox
+                scale
+                categories {
+                  name
+                }
+                proposedby {
+                  slug
+                  name
+                  avatar {
+                    childImageSharp {
+                      gatsbyImageData(width: 35)
+                    }
+                  }
+                }
+                defaultImage {
+                    childImageSharp {
+                    gatsbyImageData(width: 400)
+                    }
+               }
+              }
+            }
+          }
+        `
+    )
+    return games.nodes
+}
+

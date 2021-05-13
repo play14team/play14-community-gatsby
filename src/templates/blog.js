@@ -7,41 +7,6 @@ import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
 import BlogDetailsContent from '../components/BlogContent/BlogDetailsContent'
 
-export const query = graphql`
-query GetBlogPost($slug: String) {
-  post : allStrapiBlog(filter: {slug: { eq: $slug}}) {
-    edges {
-      node {
-        title
-        content
-        updatedAt
-        image {
-          childImageSharp {
-            gatsbyImageData(width: 500, placeholder: BLURRED, formats: AUTO)
-          }
-        }
-        date
-        slug
-        author {
-          name
-          avatar {
-            childImageSharp {
-              gatsbyImageData(width: 250, placeholder: BLURRED, formats: AUTO)
-            }
-          }
-        }
-      }
-      next {
-        slug
-      }
-      previous {
-        slug
-      }
-    }
-  }
-}
-`
-
 const BlogDetails = (props) => {
     return (
         <Layout title={props.data.post.edges[0].node.title}>
@@ -58,4 +23,39 @@ const BlogDetails = (props) => {
     )
 }
 
-export default BlogDetails;
+export default BlogDetails
+
+export const query = graphql`
+query GetBlogPost($slug: String) {
+  post : allStrapiBlog(filter: {slug: { eq: $slug}}) {
+    edges {
+      node {
+        title
+        content
+        updatedAt
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 500)
+          }
+        }
+        date
+        slug
+        author {
+          name
+          avatar {
+            childImageSharp {
+              gatsbyImageData(width: 250)
+            }
+          }
+        }
+      }
+      next {
+        slug
+      }
+      previous {
+        slug
+      }
+    }
+  }
+}
+`

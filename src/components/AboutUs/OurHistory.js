@@ -8,25 +8,6 @@ import 'moment-timezone';
 import starIcon from '../../assets/images/star-icon.png'
 
 
-export const query = graphql`
-query GetHistory {
-    history: strapiHistory {
-      beginning
-      description
-      timeline {
-        title
-        date
-        description
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-      }
-    }
-  }
-`
-
 const OurHistory = () => {
     const { history } = useStaticQuery(query)
     return (
@@ -85,3 +66,23 @@ const OurHistory = () => {
 }
 
 export default OurHistory
+
+export const query = graphql`
+ query GetHistory {
+    history: strapiHistory {
+      beginning
+      description
+      timeline {
+        title
+        date
+        description
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
+`
+

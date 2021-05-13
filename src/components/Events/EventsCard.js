@@ -4,40 +4,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 import EventDate from "./EventDate"
 
-const useGetEvents = () => {
-    const { events } = useStaticQuery(
-        graphql`
-        query GetEvents {
-            events: allStrapiEvent( sort: {fields:start, order: DESC} ) {
-                nodes {
-                    slug
-                    name
-                    start
-                    end
-                    location {
-                        name
-                    }
-                    venue {
-                        name
-                    }
-                    status
-                    defaultImage {
-                        childImageSharp {
-                            gatsbyImageData(
-                                width: 380
-                                placeholder: BLURRED
-                                formats: [AUTO, WEBP, AVIF]
-                            )
-                        }
-                    }
-                }
-            }
-        }
-    `
-    )
-    return events.nodes
-}
-
 const EventsCard = () => {
     const events = useGetEvents()
     const icons = {
@@ -84,4 +50,35 @@ const EventsCard = () => {
     )
 }
 
-export default EventsCard;
+export default EventsCard
+
+const useGetEvents = () => {
+    const { events } = useStaticQuery(
+        graphql`
+        query GetEvents {
+            events: allStrapiEvent( sort: {fields:start, order: DESC} ) {
+                nodes {
+                    slug
+                    name
+                    start
+                    end
+                    location {
+                        name
+                    }
+                    venue {
+                        name
+                    }
+                    status
+                    defaultImage {
+                        childImageSharp {
+                            gatsbyImageData(width: 380)
+                        }
+                    }
+                }
+            }
+        }
+    `
+    )
+    return events.nodes
+}
+
