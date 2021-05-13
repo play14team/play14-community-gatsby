@@ -33,7 +33,7 @@ const EventDetailsContent = (props) => {
 
                 <div className="events-details-image">
                     <GatsbyImage image={getImage(event.defaultImage)} alt={event.name} />
-                    { new Date(event.start) > new Date() ? <UpcomingEventTimer date={event.start} /> : ''}
+                    { new Date(event.start) > new Date() && <UpcomingEventTimer date={event.start} /> }
                 </div>
 
                 <div className="container">

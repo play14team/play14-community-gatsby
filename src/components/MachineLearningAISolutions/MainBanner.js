@@ -41,7 +41,7 @@ const MainBanner = () => {
                 onClose={() => setIsOpen(!isOpen)} 
             />
 
-            {display ? <OwlCarousel 
+            {display && <OwlCarousel 
                 className="home-slides owl-carousel owl-theme"
                 {...options}
             > 
@@ -102,7 +102,7 @@ const MainBanner = () => {
                         </div>
                     </div>
                 </div>
-            </OwlCarousel> : ''}
+            </OwlCarousel>}
         </React.Fragment>
     )
 }

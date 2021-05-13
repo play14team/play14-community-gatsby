@@ -21,13 +21,12 @@ const EventDescription = (props) => {
                                 <li><i className='bx bx-time'></i>Starts at <Moment format="HH:mm on MMM. DD">{event.start}</Moment></li>
                                 <li><i className='bx bx-time-five'></i>Ends at <Moment format="HH:mm on MMM. DD">{event.end}</Moment></li>
                             </ul>
-                            { event.venue ? 
+                            { event.venue && 
                                 <ul>
                                     <li><i className='bx bx-building'></i>{event.venue.name}</li>
                                 </ul>
-                                : ''
                             }
-                            { event.venue && event.venue.address ? 
+                            { event.venue && event.venue.address && 
                                 <ul>
                                     <li>
                                         <i className='bx bx-map'></i>
@@ -35,14 +34,12 @@ const EventDescription = (props) => {
                                         {event.venue.address.postalCode} {event.venue.address.city}, {event.venue.address.country} 
                                     </li>
                                 </ul>
-                                : ''
                             }
                         </div>
-                        { event.venue ?
+                        { event.venue &&
                             <div className="events-details-location">
                                 <iframe title="Map" src={event.venue.embeddedMapUrl}></iframe>
                             </div>
-                          : ''
                         }
 
                         {

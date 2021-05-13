@@ -27,7 +27,7 @@ const CaseStudy = () => {
 
     return (
         <div className="case-study-area bg-fffbf5">
-            {display ? <OwlCarousel 
+            {display && <OwlCarousel 
                 className="case-study-slides owl-carousel owl-theme"
                 {...options}
             > 
@@ -94,7 +94,7 @@ const CaseStudy = () => {
                         </div>
                     </div>
                 </div>
-            </OwlCarousel> : ''}
+            </OwlCarousel>}
         </div>
     )
 }

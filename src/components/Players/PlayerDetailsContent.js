@@ -20,7 +20,7 @@ const PlayerDetailsContent = (props) => {
                             <div className="single-footer-widget">
                                 <SocialLinks socialNetworks={player.socialNetworks} className="social-link" />
                             </div>
-                            {player.biography ? <span className="sub-title">Biography</span> : ''}
+                            {player.biography && <span className="sub-title">Biography</span>}
                             <br/>
                             <p>{player.biography}</p>
                         </div>

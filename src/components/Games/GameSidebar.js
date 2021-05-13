@@ -24,16 +24,14 @@ const GameSidebar = (props) => {
                         <span>Scale</span>
                         {game.scale}
                     </li>
-                    {
-                        game.firstplayed ? 
-                            <li>
-                                <div className="icon">
-                                    <i className='bx bx-map'></i>
-                                </div>
-                                <span>First played</span>
-                                {game.firstplayed.name}
-                            </li>
-                        : ''
+                    {   game.firstplayed && 
+                        <li>
+                            <div className="icon">
+                                <i className='bx bx-map'></i>
+                            </div>
+                            <span>First played</span>
+                            {game.firstplayed.name}
+                        </li>
                     }
                     <li>
                         <div className="icon">
@@ -81,25 +79,23 @@ const GameSidebar = (props) => {
                 </ul>
             </div>
 
-            {
-                game.resources.length > 0 ?
-                    <div className="download-file">
-                        <h3>Resources</h3>
+            {   game.resources.length > 0 &&
+                <div className="download-file">
+                    <h3>Resources</h3>
 
-                        <ul>
-                            {game.resources.map(r => {
-                                const icon = `bx bxs-file-${r.file.extension}`
-                                return(
-                                    <li>
-                                        <a href={r.file.publicURL} target="_blank" rel="noreferrer">
-                                            {r.name} <i className={icon}></i>
-                                        </a>
-                                    </li>
-                                )}
-                                )}
-                        </ul>
-                    </div>
-                : ''
+                    <ul>
+                        {game.resources.map(r => {
+                            const icon = `bx bxs-file-${r.file.extension}`
+                            return(
+                                <li>
+                                    <a href={r.file.publicURL} target="_blank" rel="noreferrer">
+                                        {r.name} <i className={icon}></i>
+                                    </a>
+                                </li>
+                            )}
+                            )}
+                    </ul>
+                </div>
             }
             
         </div>

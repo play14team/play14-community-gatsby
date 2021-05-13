@@ -51,7 +51,7 @@ const GameDetailsContent = (props) => {
                                 </div>
                             </div>
 
-                            { game.materials.length > 0 ?
+                            { game.materials.length > 0 &&
                             <div className="col-lg-12 col-md-12">
                                 <div className="content">
                                     <h3>Materials</h3>
@@ -60,9 +60,9 @@ const GameDetailsContent = (props) => {
                                     </ul>
                                 </div>
                             </div> 
-                            : ''}
+                            }
 
-                            { game.preparationSteps.length > 0 ?
+                            { game.preparationSteps.length > 0 &&
                             <div className="col-lg-12 col-md-12">
                                 <div className="content">
                                     <h3>Preparation</h3>
@@ -71,9 +71,9 @@ const GameDetailsContent = (props) => {
                                     </ul>
                                 </div>
                             </div> 
-                            : ''}
+                            }
 
-                            { game.safety.length > 0 ?
+                            { game.safety.length > 0 &&
                             <div className="col-lg-12 col-md-12">
                                 <div className="content">
                                     <h3>Safety</h3>
@@ -82,7 +82,7 @@ const GameDetailsContent = (props) => {
                                     </ul>
                                 </div>
                             </div> 
-                            : ''}
+                            }
 
                             <hr></hr>
 

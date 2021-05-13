@@ -52,7 +52,7 @@ const Testimonials = () => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                 </div>
 
-                {display ? <OwlCarousel 
+                {display && <OwlCarousel 
                     className="testimonials-slides owl-carousel owl-theme"
                     {...options}
                 > 
@@ -96,7 +96,7 @@ const Testimonials = () => {
                             </div>
                         </div>
                     </div>
-                </OwlCarousel> : ''}
+                </OwlCarousel>}
 
                 <div className="testimonials-view-btn text-center">
                     <Link to="/testimonials" className="default-btn">

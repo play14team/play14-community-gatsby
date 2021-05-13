@@ -12,14 +12,14 @@ const NavItem = (props) => {
                 onClick={setCollapsed ? () => setCollapsed(true) : e => e.preventDefault()}
                 className="nav-link"
             >
-                {name} {props.children ? <i className='bx bx-chevron-down'></i> : ''}
+                {name} {props.children && <i className='bx bx-chevron-down'></i> }
             </Link>
 
-            { props.children ?
-                    <ul className="dropdown-menu">
-                        {props.children}
-                    </ul>
-                : ''
+            { 
+                props.children &&
+                <ul className="dropdown-menu">
+                    {props.children}
+                </ul>
             }
 
         </li>
