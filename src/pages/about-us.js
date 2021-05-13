@@ -4,12 +4,12 @@ import Navbar from "../components/App/Navbar"
 import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
 import AboutUsContent from '../components/AboutUs/AboutUsContent'
-import OurHistory from '../components/AboutUs/OurHistory'
 import WhyChooseUs from '../components/AboutUs/WhyChooseUs'
 import HowItWork from '../components/AboutUs/HowItWork'
 import TeamMembers from '../components/AboutUs/TeamMembers'
 import Testimonials from '../components/AboutUs/Testimonials'
 import Partner from '../components/AboutUs/Partner'
+import CitiesMap from '../components/AboutUs/CitiesMap'
  
 const AboutUs = () => {
     return (
@@ -22,7 +22,7 @@ const AboutUs = () => {
                 activePageText="About Us" 
             />
             <AboutUsContent />
-            <OurHistory />
+            <CitiesMap />
             <WhyChooseUs />
             <HowItWork />
             <TeamMembers />

@@ -56,7 +56,7 @@ const AboutUsContent = () => {
                                     <img src={starIcon} alt="banner" /> 
                                     About Us
                                 </span>
-                                <h2>What makes #play14 so special</h2>
+                                <h2>#play14 in numbers</h2>
                                 <p>
                                 </p>
                                 
@@ -83,13 +83,13 @@ const AboutUsContent = () => {
                                     </li>
                                 </ul>
                                 <p>
-                                    There are only few rules at #play14, but we strongly believe in the importance of the ruels we have. 
+                                    There are only few rules at #play14, but we strongly believe in the importance of the rules we have. 
                                     They are what makes #play14 a special place. Please read them before you join an event and make sure to have them in mind when you are on site.
                                 </p>
                                 
-                                <Link to="/about-us" className="default-btn">
+                                {/* <Link to="/about-us" className="default-btn">
                                     <i className="flaticon-right"></i>More About Us<span></span>
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                     </div>
@@ -99,6 +99,7 @@ const AboutUsContent = () => {
             <div className="circle-shape1">
                 <img src={shape1} alt="banner" />
             </div>
+
 
             <div className="container">
                 <div className="about-inner-area">

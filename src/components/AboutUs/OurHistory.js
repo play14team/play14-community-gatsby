@@ -1,138 +1,83 @@
 import React from 'react'
+import { useStaticQuery, graphql } from "gatsby"
+import Markdown from "markdown-to-jsx"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Moment from 'react-moment';
+import 'moment-timezone';
+
 import starIcon from '../../assets/images/star-icon.png'
-import history1 from '../../assets/images/history/history1.jpg'
-import history2 from '../../assets/images/history/history2.jpg'
-import history3 from '../../assets/images/history/history3.jpg'
-import history4 from '../../assets/images/history/history4.jpg'
+
+
+export const query = graphql`
+query GetHistory {
+    history: strapiHistory {
+      beginning
+      description
+      timeline {
+        title
+        date
+        description
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
+`
 
 const OurHistory = () => {
+    const { history } = useStaticQuery(query)
     return (
         <section className="history-area ptb-100 bg-fafafb">
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">
-                        <img src={starIcon} alt="banner" /> 
+                        <img src={starIcon} alt="about" /> 
                         Our History
                     </span>
-                    <h2>History Begins in 2014</h2>
+                    <h2>{history.beginning}</h2>
                 </div>
 
+                <Markdown>{history.description}</Markdown>
+
                 <ol className="timeline history-timeline">
-                    <li className="timeline-block">
-                        <div className="timeline-date">
-                            <span>2010</span>
-                            February 20
-                            <sup>th</sup>
-                        </div>
-
-                        <div className="timeline-icon">
-                            <span className="dot-badge"></span>
-                        </div>
-
-                        <div className="timeline-content">
-                            <div className="row align-items-center">
-                                <div className="col-lg-7 col-md-12">
-                                    <div className="content">
-                                        <h3>Founded</h3>
-                                        <p>Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.</p>
+                    {
+                        history.timeline.map(timeline => {
+                            return (
+                                <li className="timeline-block">
+                                    <div className="timeline-date">
+                                        <span><Moment format="YYYY">{timeline.date}</Moment></span>
+                                        <Moment format="MMMM DD">{timeline.date}</Moment>
                                     </div>
-                                </div>
-
-                                <div className="col-lg-5 col-md-12">
-                                    <div className="image">
-                                        <img src={history1} alt="banner" />
+            
+                                    <div className="timeline-icon">
+                                        <span className="dot-badge"></span>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li className="timeline-block">
-                        <div className="timeline-date">
-                            <span>2013</span>
-                            January 14
-                            <sup>th</sup>
-                        </div>
-
-                        <div className="timeline-icon">
-                            <span className="dot-badge"></span>
-                        </div>
-
-                        <div className="timeline-content">
-                            <div className="row align-items-center">
-                                <div className="col-lg-7 col-md-12">
-                                    <div className="content">
-                                        <h3>Global Success</h3>
-                                        <p>Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.</p>
+            
+                                    <div className="timeline-content">
+                                        <div className="row align-items-center">
+                                            <div className="col-lg-7 col-md-12">
+                                                <div className="content">
+                                                    <h3>{timeline.title}</h3>
+                                                    <p>{timeline.description}</p>
+                                                </div>
+                                            </div>
+            
+                                            <div className="col-lg-5 col-md-12">
+                                                <div className="image">
+                                                    <GatsbyImage image={getImage(timeline.image)} alt={timeline.title} />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </li>
+                            )
+                        })
+                    }
 
-                                <div className="col-lg-5 col-md-12">
-                                    <div className="image">
-                                        <img src={history2} alt="banner" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
 
-                    <li className="timeline-block">
-                        <div className="timeline-date">
-                            <span>2016</span>
-                            March 25
-                            <sup>th</sup>
-                        </div>
-
-                        <div className="timeline-icon">
-                            <span className="dot-badge"></span>
-                        </div>
-
-                        <div className="timeline-content">
-                            <div className="row align-items-center">
-                                <div className="col-lg-7 col-md-12">
-                                    <div className="content">
-                                        <h3>Founded Data Center</h3>
-                                        <p>Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.</p>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-5 col-md-12">
-                                    <div className="image">
-                                        <img src={history3} alt="banner" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li className="timeline-block">
-                        <div className="timeline-date">
-                            <span>2020</span>
-                            December 10
-                            <sup>th</sup>
-                        </div>
-
-                        <div className="timeline-icon">
-                            <span className="dot-badge"></span>
-                        </div>
-
-                        <div className="timeline-content">
-                            <div className="row align-items-center">
-                                <div className="col-lg-7 col-md-12">
-                                    <div className="content">
-                                        <h3>International Award</h3>
-                                        <p>Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.</p>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-5 col-md-12">
-                                    <div className="image">
-                                        <img src={history4} alt="banner" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
                 </ol>
             </div>
         </section>

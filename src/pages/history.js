@@ -3,7 +3,7 @@ import Layout from "../components/App/Layout"
 import Navbar from "../components/App/Navbar"
 import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
-import OurHistoryContent from '../components/History/OurHistoryContent'
+import OurHistory from '../components/AboutUs/OurHistory'
 
 const History = () => {
     return (
@@ -15,7 +15,7 @@ const History = () => {
                 homePageUrl="/" 
                 activePageText="History" 
             />
-            <OurHistoryContent />
+            <OurHistory />
             <Footer />
         </Layout>
     );
