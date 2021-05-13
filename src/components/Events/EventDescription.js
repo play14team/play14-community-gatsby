@@ -5,6 +5,7 @@ import Moment from 'react-moment';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import 'moment-timezone';
 import EventDate from './EventDate'
+import Carousel from '../Common/Carousel'
 
 const EventDescription = (props) => {
     const { event } = props
@@ -46,14 +47,14 @@ const EventDescription = (props) => {
                             event.content.map((c, i) => {
                                 if (c.markdown) {
                                     return (
-                                        <div className="events-details-desc">
+                                        <div className="events-details-desc pt-70">
                                             <Markdown key={`markdown${i}`} >{c.markdown}</Markdown>
                                         </div>
                                     )
                                 }
                                 if (c.embeddedVideo) {
                                     return (
-                                        <div className="events-details-desc">
+                                        <div className="events-details-desc pt-70">
                                             <iframe src={c.embeddedVideo} title="Video" width="100%" height="480" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                     )
@@ -61,12 +62,14 @@ const EventDescription = (props) => {
                                 if (c.slides)
                                 {
                                     return (
-                                        <div className="events-details-image">
-                                            {
-                                                c.slides.map((slide, i) => {
-                                                    return (<GatsbyImage key={`image${i}`} image={getImage(slide.file)} alt={slide.file.name} />)       
-                                                })
-                                            }
+                                        <div className="events-details-image pt-70">
+                                            <Carousel>
+                                                {
+                                                    c.slides.map((slide, i) => {
+                                                        return (<GatsbyImage key={`image${i}`} image={getImage(slide.file)} alt={slide.file.name} />)       
+                                                    })
+                                                }
+                                            </Carousel>
                                         </div>
                                     )
                                 }

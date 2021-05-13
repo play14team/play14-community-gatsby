@@ -9,7 +9,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const BlogCard = () => {
     const posts  = useGetBlogPosts()
     return (
-        <div className="blog-area ptb-50">
+        <div className="blog-area ptb-70">
             <div className="container">
                 <div className="row">
                     { 
