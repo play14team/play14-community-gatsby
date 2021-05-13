@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactWOW from 'react-wow'
 import { Link } from 'gatsby'
-import bannerImg from '../../assets/images/banner-img1.png'
+import bannerImg from '../../assets/images/play14_transparent_gray_medium.png'
 
 const Banner = () => {
     return (
@@ -11,18 +11,18 @@ const Banner = () => {
                     <div className="col-lg-6 col-md-12">
                         <div className="main-banner-content">
                             <ReactWOW delay='.1s' animation='fadeInLeft'>
-                                <h1>Secure IT Solutions Services</h1>
+                                <h1>We believe in playfulness</h1>
                             </ReactWOW>
 
                             <ReactWOW delay='.1s' animation='fadeInLeft'>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>#play14 is a worldwide gathering of like-minded people who believe that playing is the best way to learn, share and be creative.</p>
                             </ReactWOW>
 
                             <ReactWOW delay='.1s' animation='fadeInRight'>
                                 <div className="btn-box">
-                                    <Link to="/contact" className="default-btn">
+                                    <Link to="/about-us" className="default-btn">
                                         <i className="flaticon-right"></i> 
-                                        Get Started <span></span>
+                                        Move about us <span></span>
                                     </Link>
                                 </div>
                             </ReactWOW>

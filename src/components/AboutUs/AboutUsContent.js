@@ -1,8 +1,8 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import Markdown from "markdown-to-jsx"
 
-import aboutImage from '../../assets/images/about/about-img5.png'
+import aboutImage from '../../assets/images/play14-movement.png'
 import starIcon from '../../assets/images/star-icon.png'
 import icon4 from '../../assets/images/icons/icon4.png'
 import icon5 from '../../assets/images/icons/icon5.png'
@@ -60,9 +60,9 @@ const AboutUsContent = () => {
                                     They are what makes #play14 a special place. Please read them before you join an event and make sure to have them in mind when you are on site.
                                 </p>
                                 
-                                {/* <Link to="/about-us" className="default-btn">
-                                    <i className="flaticon-right"></i>More About Us<span></span>
-                                </Link> */}
+                                <Link to="/history" className="default-btn">
+                                    <i className="flaticon-right"></i>Learn our history<span></span>
+                                </Link>
                             </div>
                         </div>
                     </div>
