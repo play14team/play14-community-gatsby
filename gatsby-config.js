@@ -8,7 +8,7 @@ module.exports = {
     titleTemplate: "%s · #play14",
     description: `#play14 - We belive in playfulness`,
     url: `https://play14.org`,
-    image: `/assets/images/logo.png`,
+    image: `logo.png`,
     author: `Cédric Pontet`,
     email: `team@play14.org`,
     twitterUsername: `play14team`,
