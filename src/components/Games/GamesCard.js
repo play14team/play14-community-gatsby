@@ -90,7 +90,7 @@ const useGetGames = () => {
                 }
                 defaultImage {
                     childImageSharp {
-                    gatsbyImageData(width: 400)
+                    gatsbyImageData(width: 400, height: 250)
                     }
                }
               }

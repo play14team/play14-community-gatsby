@@ -97,7 +97,7 @@ const useGetBlogPosts = () => {
                 }
                 image {
                   childImageSharp {
-                    gatsbyImageData(width: 380)
+                    gatsbyImageData(width: 380, height: 300)
                   }
                 }
               }

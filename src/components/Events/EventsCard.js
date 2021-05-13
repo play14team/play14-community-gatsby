@@ -71,7 +71,7 @@ const useGetEvents = () => {
                     status
                     defaultImage {
                         childImageSharp {
-                            gatsbyImageData(width: 380)
+                            gatsbyImageData(width: 380, height: 300)
                         }
                     }
                 }
