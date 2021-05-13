@@ -32,7 +32,7 @@ const Gallery = () => {
     const [isOpenImage, setIsOpenImage] = React.useState(false);
 
     return (
-        <Layout>
+        <Layout title="Gallery">
             <Navbar />
             <PageBanner
                 pageTitle="Gallery" 

@@ -7,7 +7,7 @@ import EventsCard from '../components/Events/EventsCard'
 
 const Events = () => {
     return (
-        <Layout>
+        <Layout title="Events">
             <Navbar />
             <PageBanner
                 pageTitle="Events" 

@@ -38,7 +38,7 @@ export const query = graphql`
 const Player = ({ data }) => {
   const { player } = data
   return (
-    <Layout>
+    <Layout title={player.name}>
       <Navbar />
       <PageBanner
           pageTitle={player.name}

@@ -13,7 +13,7 @@ import CitiesMap from '../components/AboutUs/CitiesMap'
  
 const AboutUs = () => {
     return (
-        <Layout>
+        <Layout title="About Us">
             <Navbar />
             <PageBanner
                 pageTitle="About Us" 

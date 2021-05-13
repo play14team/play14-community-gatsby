@@ -3,10 +3,10 @@ import { RecoilRoot } from 'recoil'
 import GoTop from './GoTop'
 import SEO from './SEO'
 
-const Layout = ({ children }) => {
+const Layout = ({ title, children }) => {
     return (
         <RecoilRoot>
-            <SEO />
+            <SEO title={title} />
             {children}
             <GoTop scrollStepInPx="100" delayInMs="10.50" />
         </RecoilRoot>

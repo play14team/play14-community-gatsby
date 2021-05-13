@@ -8,7 +8,7 @@ import privacyPolicy from '../assets/images/privacy-policy.jpg'
 
 const PrivacyPolicy = () => {
     return (
-        <Layout>
+        <Layout title="Privacy Policy">
             <Navbar />
             <PageBanner
                 pageTitle="Privacy Policy" 

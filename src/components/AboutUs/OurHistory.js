@@ -30,7 +30,7 @@ query GetHistory {
 const OurHistory = () => {
     const { history } = useStaticQuery(query)
     return (
-        <section className="history-area ptb-100 bg-fafafb">
+        <section className="history-area bg-fafafb">
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">

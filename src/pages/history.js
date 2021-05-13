@@ -7,7 +7,7 @@ import OurHistory from '../components/AboutUs/OurHistory'
 
 const History = () => {
     return (
-        <Layout>
+        <Layout title="History">
             <Navbar />
             <PageBanner
                 pageTitle="History" 

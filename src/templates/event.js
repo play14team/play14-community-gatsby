@@ -135,7 +135,7 @@ query GetSingleEvent($slug: String) {
 
 const Event = ({ data }) => {
   return (
-    <Layout>
+    <Layout title={data.event.name}>
       <Navbar />
       <PageBanner
           pageTitle={data.event.name} 

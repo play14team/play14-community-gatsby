@@ -7,7 +7,7 @@ import GamesCard from '../components/Games/GamesCard'
 
 const Games = () => {
     return (
-        <Layout>
+        <Layout title="Games">
             <Navbar />
             <PageBanner
                 pageTitle="Games" 

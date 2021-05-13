@@ -8,7 +8,7 @@ import PlayersCard from "../components/Players/PlayersCard"
 
 const PlayersPage = () => {
   return (
-    <Layout>
+    <Layout title="Players">
       <Navbar />
       <PageBanner
           pageTitle="Players" 

@@ -45,7 +45,7 @@ const useGetGames = () => {
 const GamesCard = () => {
     const games = useGetGames()
     return (
-        <div className="courses-area ptb-100 bg-fafafb">
+        <div className="courses-area bg-fafafb">
             <div className="container">
                 <div className="row">
                     { games.map(game => {

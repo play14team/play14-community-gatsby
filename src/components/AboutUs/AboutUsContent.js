@@ -10,37 +10,10 @@ import icon6 from '../../assets/images/icons/icon6.png'
 import icon7 from '../../assets/images/icons/icon7.png'
 import shape1 from '../../assets/images/shape/circle-shape1.png'
 
-const query = graphql`
-query GetManifesto {
-    manifesto: strapiManifesto {
-      introduction
-      items {
-        text
-      }
-    }
-    codeOfConduct: strapiCodeOfConduct {
-      introduction
-      items {
-        text
-      }
-      conclusion
-    }
-    numberOfEvents: allStrapiEvent {
-      totalCount
-    }
-    numberOfPlayers: allStrapiPlayer {
-      totalCount
-    }
-    numberOfGames: allStrapiGame {
-      totalCount
-    }
-  }
-`
-
 const AboutUsContent = () => {
     const { manifesto, codeOfConduct, numberOfEvents, numberOfPlayers, numberOfGames } = useStaticQuery(query)
     return (
-        <section className="about-area ptb-100">
+        <section className="about-area">
             <div className="container-fluid">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-12">
@@ -152,4 +125,32 @@ const AboutUsContent = () => {
     )
 }
 
-export default AboutUsContent;
+export default AboutUsContent
+
+const query = graphql`
+query GetManifesto {
+    manifesto: strapiManifesto {
+      introduction
+      items {
+        text
+      }
+    }
+    codeOfConduct: strapiCodeOfConduct {
+      introduction
+      items {
+        text
+      }
+      conclusion
+    }
+    numberOfEvents: allStrapiEvent {
+      totalCount
+    }
+    numberOfPlayers: allStrapiPlayer {
+      totalCount
+    }
+    numberOfGames: allStrapiGame {
+      totalCount
+    }
+  }
+`
+

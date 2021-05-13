@@ -4,10 +4,14 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `#play14`,
-    description: `#play14 community website - We belive in playfulness`,
+    title: `Community`,
+    titleTemplate: "%s · #play14",
+    description: `#play14 - We belive in playfulness`,
+    url: `https://play14.org`,
+    image: `/assets/images/logo.png`,
     author: `Cédric Pontet`,
-    email: `cedric@play14.org`,
+    email: `team@play14.org`,
+    twitterUsername: `play14team`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,7 +34,11 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/hash.png`, // This path is relative to the root of the site.
+        icon: `static/favicon.ico`, // This path is relative to the root of the site.
+        defaults: {
+          formats: [`AUTO`, `WEBP`, `AVIF`],
+          placeholder: `BLURRED`
+        }
       },
     },
     {

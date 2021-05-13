@@ -9,7 +9,7 @@ const Players = (props) => {
 
     if (players.length > 0) 
         return (
-            <div className="scientist-area bg-fafafb pt-100 pb-70">
+            <div className="scientist-area bg-fafafb pt-100">
                 <div className="container">
                     <div className="section-title">
                         <h3>{name}</h3>

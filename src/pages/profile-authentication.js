@@ -8,7 +8,7 @@ import RegisterForm from '../components/ProfileAuthentication/RegisterForm'
 
 const ProfileAuthentication = () => {
     return (
-        <Layout>
+        <Layout title="Login">
             <Navbar />
             <PageBanner
                 pageTitle="Profile Authentication" 

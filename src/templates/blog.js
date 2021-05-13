@@ -43,9 +43,8 @@ query GetBlogPost($slug: String) {
 `
 
 const BlogDetails = (props) => {
-  console.log(props.data.post.edges[0].node.title)
     return (
-        <Layout>
+        <Layout title={props.data.post.edges[0].node.title}>
             <Navbar />
             <PageBanner
                 pageTitle={props.data.post.edges[0].node.title}

@@ -14,7 +14,7 @@ import StartProject from '../components/Common/StartProject'
 
 const FAQ = () => {
     return (
-        <Layout>
+        <Layout title="FAQ">
             <Navbar />
             <PageBanner
                 pageTitle="FAQ" 

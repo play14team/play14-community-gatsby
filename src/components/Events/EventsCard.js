@@ -47,7 +47,7 @@ const EventsCard = () => {
         "Canceled" : "bx bx-calendar-x",
     }
     return (
-        <div className="events-area pt-100 pb-70">
+        <div className="events-area pb-70">
             <div className="container">
                 <div className="row">
                     { events.map(event => {

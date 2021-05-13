@@ -48,7 +48,7 @@ const useGetBlogPosts = () => {
 const BlogCard = () => {
     const posts  = useGetBlogPosts()
     return (
-        <div className="blog-area ptb-100">
+        <div className="blog-area ptb-50">
             <div className="container">
                 <div className="row">
                     { 

@@ -77,7 +77,7 @@ query GetSingleGame($slug: String) {
 
 const Game = ({ data }) => {
   return (
-    <Layout>
+    <Layout title={data.game.name}>
       <Navbar />
       <PageBanner
           pageTitle={data.game.name} 
