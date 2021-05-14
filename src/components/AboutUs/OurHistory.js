@@ -6,6 +6,7 @@ import Moment from 'react-moment';
 import 'moment-timezone';
 
 import starIcon from 'assets/images/star-icon.png'
+import logo from 'assets/images/logo.png'
 
 
 const OurHistory = () => {
@@ -21,7 +22,18 @@ const OurHistory = () => {
                     <h2>{history.beginning}</h2>
                 </div>
 
-                <Markdown>{history.description}</Markdown>
+                <div className="row pb-70">
+                    <div className="col-lg-8 col-md-12">
+                        <h3>How it started</h3>
+                        <Markdown>{history.description}</Markdown>
+                    </div>
+                    <div className="col-lg-4 col-md-12">
+                        <h3>Acknowledgement</h3>
+                        <Markdown>{history.acknowledgement}</Markdown>
+                        <img src={logo} alt="logo" /> 
+                    </div>
+                </div>
+
 
                 <ol className="timeline history-timeline">
                     {
@@ -57,8 +69,6 @@ const OurHistory = () => {
                             )
                         })
                     }
-
-
                 </ol>
             </div>
         </section>
@@ -72,6 +82,7 @@ export const query = graphql`
     history: strapiHistory {
       beginning
       description
+      acknowledgement
       timeline {
         title
         date
