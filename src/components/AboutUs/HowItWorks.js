@@ -8,7 +8,7 @@ import process5 from 'assets/images/process/process5.png'
 import process6 from 'assets/images/process/process6.png'
 import shape from 'assets/images/shape/circle-shape1.png'
 
-const HowItWork = () => {
+const HowItWorks = () => {
     return (
         <section className="process-area pb-70">
             <div className="container">
@@ -97,4 +97,4 @@ const HowItWork = () => {
     )
 }
 
-export default HowItWork
+export default HowItWorks

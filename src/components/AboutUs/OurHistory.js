@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import Markdown from "markdown-to-jsx"
+import Markdown from 'markdown-to-jsx'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Moment from 'react-moment';
 import 'moment-timezone';

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import BlogSidebar from './BlogSidebar'
-import Markdown from "markdown-to-jsx"
+import Markdown from 'markdown-to-jsx'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 

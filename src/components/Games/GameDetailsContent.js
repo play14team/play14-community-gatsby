@@ -1,6 +1,6 @@
 import React from 'react'
 import GameSidebar from './GameSidebar'
-import Markdown from "markdown-to-jsx"
+import Markdown from 'markdown-to-jsx'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const GameDetailsContent = (props) => {

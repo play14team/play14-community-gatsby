@@ -3,13 +3,14 @@ import Layout from 'components/App/Layout'
 import Navbar from 'components/App/Navbar'
 import PageBanner from 'components/Common/PageBanner'
 import Footer from 'components/App/Footer'
-import AboutUsContent from 'components/AboutUs/AboutUsContent'
-import WhyChooseUs from 'components/AboutUs/WhyChooseUs'
-import HowItWork from 'components/AboutUs/HowItWork'
+import OurRules from 'components/AboutUs/OurRules'
+import OurNumbers from 'components/AboutUs/OurNumbers'
+import WhyJoinUs from 'components/AboutUs/WhyJoinUs'
+import HowItWorks from 'components/AboutUs/HowItWorks'
 import TeamMembers from 'components/AboutUs/TeamMembers'
 import Testimonials from 'components/AboutUs/Testimonials'
 import Partner from 'components/AboutUs/Partner'
-import CitiesMap from 'components/AboutUs/CitiesMap'
+import FindingUs from 'components/AboutUs/FindingUs'
  
 const AboutUs = () => {
     return (
@@ -21,10 +22,11 @@ const AboutUs = () => {
                 homePageUrl='/' 
                 activePageText='About Us' 
             />
-            <AboutUsContent />
-            <CitiesMap />
-            <WhyChooseUs />
-            <HowItWork />
+            <WhyJoinUs />
+            <OurNumbers />
+            <OurRules />
+            <HowItWorks />
+            <FindingUs />
             <TeamMembers />
             <Testimonials />
             <Partner />

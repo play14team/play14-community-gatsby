@@ -1,6 +1,6 @@
 import React from 'react'
 import EventSidebar from './EventSidebar'
-import Markdown from "markdown-to-jsx"
+import Markdown from 'markdown-to-jsx'
 import Moment from 'react-moment';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import 'moment-timezone';
