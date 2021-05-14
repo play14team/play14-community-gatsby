@@ -87,39 +87,38 @@ const Navbar = () => {
                                     <NavItem name="Pages">
                                         <NavItem name="Home">
                                             <NavItem name="IT Services" to="/" setCollapsed={setCollapsed} />
-                                            <NavItem name="SEO Agency" to="/seo-agency" setCollapsed={setCollapsed} />
-                                            <NavItem name="Data Science ML Company" to="/data-science-ml-company" setCollapsed={setCollapsed} />
-                                            <NavItem name="Data Analytics & AI Startup" to="/data-analytics-ai-startup" setCollapsed={setCollapsed} />
-                                            <NavItem name="Digital Marketing Agency" to="/digital-marketing-agency" setCollapsed={setCollapsed} />
-                                            <NavItem name="Data Science Online Courses" to="/data-science-online-courses" setCollapsed={setCollapsed} />
-                                            <NavItem name="Big Data Analysis Startup" to="/big-data-analysis-startup" setCollapsed={setCollapsed} />
-                                            <NavItem name="Data Analytics ML Consulting" to="/data-analytics-ml-consulting" setCollapsed={setCollapsed} />
-                                            <NavItem name="Machine Learning AI Solutions" to="/machine-learning-ai-solutions" setCollapsed={setCollapsed} />
+                                            <NavItem name="SEO Agency" to="/others/seo-agency" setCollapsed={setCollapsed} />
+                                            <NavItem name="Data Science ML Company" to="/others/data-science-ml-company" setCollapsed={setCollapsed} />
+                                            <NavItem name="Data Analytics & AI Startup" to="/others/data-analytics-ai-startup" setCollapsed={setCollapsed} />
+                                            <NavItem name="Digital Marketing Agency" to="/others/digital-marketing-agency" setCollapsed={setCollapsed} />
+                                            <NavItem name="Data Science Online Courses" to="/others/data-science-online-courses" setCollapsed={setCollapsed} />
+                                            <NavItem name="Big Data Analysis Startup" to="/others/big-data-analysis-startup" setCollapsed={setCollapsed} />
+                                            <NavItem name="Data Analytics ML Consulting" to="/others/data-analytics-ml-consulting" setCollapsed={setCollapsed} />
+                                            <NavItem name="Machine Learning AI Solutions" to="/others/machine-learning-ai-solutions" setCollapsed={setCollapsed} />
                                         </NavItem>
 
                                         <NavItem name="Services">
-                                            <NavItem name="Services" to="/services" setCollapsed={setCollapsed} />
-                                            <NavItem name="Service Details" to="/service-details" setCollapsed={setCollapsed} />
+                                            <NavItem name="Services" to="/others/services" setCollapsed={setCollapsed} />
+                                            <NavItem name="Service Details" to="/others/service-details" setCollapsed={setCollapsed} />
                                         </NavItem>
                                         
                                         <NavItem name="Case Studies">
-                                            <NavItem name="Case Studies" to="/case-studies" setCollapsed={setCollapsed} />
-                                            <NavItem name="Case Study Details" to="/case-studies-details" setCollapsed={setCollapsed} />
+                                            <NavItem name="Case Studies" to="/others/case-studies" setCollapsed={setCollapsed} />
+                                            <NavItem name="Case Study Details" to="/others/case-studies-details" setCollapsed={setCollapsed} />
                                         </NavItem>
 
                                         <NavItem name="Courses">
-                                            <NavItem name="Courses" to="/courses" setCollapsed={setCollapsed} />
-                                            <NavItem name="Course Details" to="/course-details" setCollapsed={setCollapsed} />
+                                            <NavItem name="Courses" to="/others/courses" setCollapsed={setCollapsed} />
+                                            <NavItem name="Course Details" to="/others/course-details" setCollapsed={setCollapsed} />
                                         </NavItem>
 
-                                        <NavItem name="Contact" to="/contact" setCollapsed={setCollapsed} />
-                                        <NavItem name="Coming soon" to="/coming-soon" setCollapsed={setCollapsed} />
-                                        <NavItem name="Membership Levels" to="/membership-levels" setCollapsed={setCollapsed} />
-                                        <NavItem name="Login/Register" to="/profile-authentication" setCollapsed={setCollapsed} />
-                                        <NavItem name="Terms of Service" to="/terms-of-service" setCollapsed={setCollapsed} />
-                                        <NavItem name="Testimonials" to="/testimonials" setCollapsed={setCollapsed} />
-                                        <NavItem name="Team" to="/team" setCollapsed={setCollapsed} />
-                                        <NavItem name="" to="/" setCollapsed={setCollapsed} />
+                                        <NavItem name="Contact" to="/others/contact" setCollapsed={setCollapsed} />
+                                        <NavItem name="Coming soon" to="/others/coming-soon" setCollapsed={setCollapsed} />
+                                        <NavItem name="Membership Levels" to="/others/membership-levels" setCollapsed={setCollapsed} />
+                                        <NavItem name="Login/Register" to="/others/profile-authentication" setCollapsed={setCollapsed} />
+                                        <NavItem name="Terms of Service" to="/others/terms-of-service" setCollapsed={setCollapsed} />
+                                        <NavItem name="Testimonials" to="/others/testimonials" setCollapsed={setCollapsed} />
+                                        <NavItem name="Team" to="/others/team" setCollapsed={setCollapsed} />
                                         
                                     </NavItem>
 
