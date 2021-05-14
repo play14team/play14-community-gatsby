@@ -1,12 +1,12 @@
 import React from 'react'
-import starIcon from '../../assets/images/star-icon.png'
-import process1 from '../../assets/images/process/process1.png'
-import process2 from '../../assets/images/process/process2.png'
-import process3 from '../../assets/images/process/process3.png'
-import process4 from '../../assets/images/process/process4.png'
-import process5 from '../../assets/images/process/process5.png'
-import process6 from '../../assets/images/process/process6.png'
-import shape from '../../assets/images/shape/circle-shape1.png'
+import starIcon from 'assets/images/star-icon.png'
+import process1 from 'assets/images/process/process1.png'
+import process2 from 'assets/images/process/process2.png'
+import process3 from 'assets/images/process/process3.png'
+import process4 from 'assets/images/process/process4.png'
+import process5 from 'assets/images/process/process5.png'
+import process6 from 'assets/images/process/process6.png'
+import shape from 'assets/images/shape/circle-shape1.png'
 
 const HowItWork = () => {
     return (

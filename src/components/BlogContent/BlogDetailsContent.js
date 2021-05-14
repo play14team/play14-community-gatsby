@@ -5,15 +5,15 @@ import Markdown from "markdown-to-jsx"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
-import img4 from '../../assets/images/blog/blog-img4.jpg'
-import img5 from '../../assets/images/blog/blog-img5.jpg'
-import img7 from '../../assets/images/blog/blog-img7.jpg'
-import img11 from '../../assets/images/blog/blog-img11.jpg'
-import img12 from '../../assets/images/blog/blog-img12.jpg'
-import user1 from '../../assets/images/user1.jpg'
-import user2 from '../../assets/images/user2.jpg'
-import user3 from '../../assets/images/user3.jpg'
-import user4 from '../../assets/images/user4.jpg'
+import img4 from 'assets/images/blog/blog-img4.jpg'
+import img5 from 'assets/images/blog/blog-img5.jpg'
+import img7 from 'assets/images/blog/blog-img7.jpg'
+import img11 from 'assets/images/blog/blog-img11.jpg'
+import img12 from 'assets/images/blog/blog-img12.jpg'
+import user1 from 'assets/images/user1.jpg'
+import user2 from 'assets/images/user2.jpg'
+import user3 from 'assets/images/user3.jpg'
+import user4 from 'assets/images/user4.jpg'
 
 const BlogDetailsContent = (props) => {
     const { post } = props

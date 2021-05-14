@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby'
 import { useRecoilState } from 'recoil'
-import { collapsedState } from '../../utils/recoil-atoms'
-import logo from "../../assets/images/play14_transparent_gray_x-small.png"
+import { collapsedState } from 'utils/recoil-atoms'
+import logo from "assets/images/play14_transparent_gray_x-small.png"
 import NavItem from './NavItem'
 
 const Navbar = () => {

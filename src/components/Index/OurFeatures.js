@@ -1,11 +1,11 @@
 import React from 'react'
-import starIcon from '../../assets/images/star-icon.png'
-import serviceIcon1 from '../../assets/images/services/service-icon1.png'
-import serviceIcon2 from '../../assets/images/services/service-icon2.png'
-import serviceIcon3 from '../../assets/images/services/service-icon3.png'
-import serviceIcon4 from '../../assets/images/services/service-icon4.png'
-import serviceIcon5 from '../../assets/images/services/service-icon5.png'
-import serviceIcon6 from '../../assets/images/services/service-icon6.png'
+import starIcon from 'assets/images/star-icon.png'
+import serviceIcon1 from 'assets/images/services/service-icon1.png'
+import serviceIcon2 from 'assets/images/services/service-icon2.png'
+import serviceIcon3 from 'assets/images/services/service-icon3.png'
+import serviceIcon4 from 'assets/images/services/service-icon4.png'
+import serviceIcon5 from 'assets/images/services/service-icon5.png'
+import serviceIcon6 from 'assets/images/services/service-icon6.png'
 
 const OurFeatures = () => {
     return (

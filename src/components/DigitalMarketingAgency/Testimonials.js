@@ -1,9 +1,9 @@
 import React from 'react'
-import client1 from '../../assets/images/user1.jpg'
-import client2 from '../../assets/images/user2.jpg'
-import client3 from '../../assets/images/user3.jpg'
-import shape9 from '../../assets/images/shape/vector-shape9.png'
-import shape10 from '../../assets/images/shape/vector-shape10.png'
+import client1 from 'assets/images/user1.jpg'
+import client2 from 'assets/images/user2.jpg'
+import client3 from 'assets/images/user3.jpg'
+import shape9 from 'assets/images/shape/vector-shape9.png'
+import shape10 from 'assets/images/shape/vector-shape10.png'
 import Loadable from '@loadable/component'
 const OwlCarousel = Loadable(() => import('react-owl-carousel3'))
 

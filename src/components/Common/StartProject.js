@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import start1 from '../../assets/images/project-start1.png'
-import shape9 from '../../assets/images/shape/vector-shape9.png'
-import shape10 from '../../assets/images/shape/vector-shape10.png'
+import start1 from 'assets/images/project-start1.png'
+import shape9 from 'assets/images/shape/vector-shape9.png'
+import shape10 from 'assets/images/shape/vector-shape10.png'
 
 const StartProject = () => {
     return (

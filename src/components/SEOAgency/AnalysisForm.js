@@ -1,5 +1,5 @@
 import React from 'react'
-import seoAnalysis from '../../assets/images/seo-analysis.png'
+import seoAnalysis from 'assets/images/seo-analysis.png'
 
 const AnalysisForm = () => {
     return (

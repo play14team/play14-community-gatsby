@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import service3 from '../../assets/images/services/service3.png'
-import starIcon from '../../assets/images/star-icon.png'
-import shape2 from '../../assets/images/our-mission/our-mission-shape2.png'
-import shape1 from '../../assets/images/shape/circle-shape1.png'
+import service3 from 'assets/images/services/service3.png'
+import starIcon from 'assets/images/star-icon.png'
+import shape2 from 'assets/images/our-mission/our-mission-shape2.png'
+import shape1 from 'assets/images/shape/circle-shape1.png'
 
 const AboutArea = () => {
     return (

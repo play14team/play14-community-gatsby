@@ -1,10 +1,10 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import starIcon from '../../assets/images/star-icon.png'
-import team1 from '../../assets/images/scientist/scientist1.png'
-import team2 from '../../assets/images/scientist/scientist2.png'
-import team3 from '../../assets/images/scientist/scientist3.png'
-import team4 from '../../assets/images/scientist/scientist4.png'
+import starIcon from 'assets/images/star-icon.png'
+import team1 from 'assets/images/scientist/scientist1.png'
+import team2 from 'assets/images/scientist/scientist2.png'
+import team3 from 'assets/images/scientist/scientist3.png'
+import team4 from 'assets/images/scientist/scientist4.png'
 
 const TeamMembers = () => {
     return (

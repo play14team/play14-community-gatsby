@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import img5 from '../../assets/images/about/about-img5.png'
-import starIcon from '../../assets/images/star-icon.png'
-import icon4 from '../../assets/images/icons/icon4.png'
-import icon5 from '../../assets/images/icons/icon5.png'
-import icon6 from '../../assets/images/icons/icon6.png'
-import icon7 from '../../assets/images/icons/icon7.png'
-import shape1 from '../../assets/images/shape/circle-shape1.png'
+import img5 from 'assets/images/about/about-img5.png'
+import starIcon from 'assets/images/star-icon.png'
+import icon4 from 'assets/images/icons/icon4.png'
+import icon5 from 'assets/images/icons/icon5.png'
+import icon6 from 'assets/images/icons/icon6.png'
+import icon7 from 'assets/images/icons/icon7.png'
+import shape1 from 'assets/images/shape/circle-shape1.png'
 
 const AboutUs = () => {
     return (

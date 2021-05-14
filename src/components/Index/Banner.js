@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactWOW from 'react-wow'
 import { Link } from 'gatsby'
-import bannerImg from '../../assets/images/play14_transparent_gray_medium.png'
+import bannerImg from 'assets/images/play14_transparent_gray_medium.png'
 
 const Banner = () => {
     return (

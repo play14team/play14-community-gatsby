@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from "../components/App/Layout"
 import Navbar from "../components/App/Navbar"
-import PageBanner from '../components/Common/PageBanner'
+import PageBanner from 'components//Common/PageBanner'
 import Footer from "../components/App/Footer"
-import TwoColumns from '../components/Studies/TwoColumns'
+import TwoColumns from 'components//Studies/TwoColumns'
 
 // Functional component
 const CaseStudies = () => {

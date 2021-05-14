@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import shape1 from '../../assets/images/shape/shape1.svg'
-import shape2 from '../../assets/images/shape/shape2.png'
-import shape3 from '../../assets/images/shape/shape3.png'
+import shape1 from 'assets/images/shape/shape1.svg'
+import shape2 from 'assets/images/shape/shape2.png'
+import shape3 from 'assets/images/shape/shape3.png'
 
 const PageBanner = ({pageTitle, homePageUrl, homePageText, activePageText}) => {
     return (

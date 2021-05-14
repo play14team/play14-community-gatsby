@@ -1,6 +1,6 @@
 import React from 'react'
-import PhotoGallery from '../Photos/PhotoGallery'
-import Gallery from '../Photos/Gallery'
+import PhotoGallery from 'components/Photos/PhotoGallery'
+import Gallery from 'components/Photos/Gallery'
 
 const EventPhotoGallery = (props) => {
     const { event } = props

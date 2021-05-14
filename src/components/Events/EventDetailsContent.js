@@ -2,7 +2,7 @@ import React from 'react'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import UpcomingEventTimer from './UpcomingEventTimer'
 import EventDescription from './EventDescription'
-import EventPlayers from '../Players/Players'
+import EventPlayers from 'components/Players/Players'
 import EventTimetable from './EventTimetable'
 import EventPhotoGallery from './EventPhotoGallery'
 

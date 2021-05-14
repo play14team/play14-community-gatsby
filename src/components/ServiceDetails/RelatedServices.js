@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import icon1 from '../../assets/images/services/service-icon1.png'
-import icon2 from '../../assets/images/services/service-icon2.png'
-import icon3 from '../../assets/images/services/service-icon3.png'
+import icon1 from 'assets/images/services/service-icon1.png'
+import icon2 from 'assets/images/services/service-icon2.png'
+import icon3 from 'assets/images/services/service-icon3.png'
 
 const RelatedServices = () => {
     return (

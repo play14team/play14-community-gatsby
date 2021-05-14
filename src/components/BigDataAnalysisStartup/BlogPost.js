@@ -1,14 +1,14 @@
 import React from 'react';
 import {Link} from 'gatsby'
 
-import BlogImg4 from '../../assets/images/blog/blog-img4.jpg'
-import BlogImg5 from '../../assets/images/blog/blog-img5.jpg'
-import BlogImg6 from '../../assets/images/blog/blog-img6.jpg'
-import User1 from '../../assets/images/user1.jpg'
-import User2 from '../../assets/images/user2.jpg'
-import User3 from '../../assets/images/user3.jpg'
-import VectorShape1 from '../../assets/images/shape/vector-shape1.png'
-import VectorShape2 from '../../assets/images/shape/vector-shape2.png'
+import BlogImg4 from 'assets/images/blog/blog-img4.jpg'
+import BlogImg5 from 'assets/images/blog/blog-img5.jpg'
+import BlogImg6 from 'assets/images/blog/blog-img6.jpg'
+import User1 from 'assets/images/user1.jpg'
+import User2 from 'assets/images/user2.jpg'
+import User3 from 'assets/images/user3.jpg'
+import VectorShape1 from 'assets/images/shape/vector-shape1.png'
+import VectorShape2 from 'assets/images/shape/vector-shape2.png'
 
 const BlogPost = () => {
     return (

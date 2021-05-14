@@ -2,17 +2,17 @@ import React from 'react';
 import {Link} from 'gatsby'
 import ReactWOW from 'react-wow';
 
-import Banner4Shape1 from '../../assets/images/main-banner/banner-four/banner-four-shape1.png'
-import Banner4Shape2 from '../../assets/images/main-banner/banner-four/banner-four-shape2.png'
-import Banner4Shape3 from '../../assets/images/main-banner/banner-four/banner-four-shape3.png'
-import Banner4Shape4 from '../../assets/images/main-banner/banner-four/banner-four-shape4.png'
-import Banner4Shape5 from '../../assets/images/main-banner/banner-four/banner-four-shape5.png'
-import Banner4Shape6 from '../../assets/images/main-banner/banner-four/banner-four-shape6.png'
-import Banner4Shape7 from '../../assets/images/main-banner/banner-four/banner-four-shape7.png'
-import Banner4Shape8 from '../../assets/images/main-banner/banner-four/banner-four-shape8.png'
-import Banner4Shape9 from '../../assets/images/main-banner/banner-four/banner-four-shape9.png'
-import Banner4Shape10 from '../../assets/images/main-banner/banner-four/banner-four-shape10.png'
-import Banner4MainImage from '../../assets/images/main-banner/banner-four/banner-four-main-img.png'
+import Banner4Shape1 from 'assets/images/main-banner/banner-four/banner-four-shape1.png'
+import Banner4Shape2 from 'assets/images/main-banner/banner-four/banner-four-shape2.png'
+import Banner4Shape3 from 'assets/images/main-banner/banner-four/banner-four-shape3.png'
+import Banner4Shape4 from 'assets/images/main-banner/banner-four/banner-four-shape4.png'
+import Banner4Shape5 from 'assets/images/main-banner/banner-four/banner-four-shape5.png'
+import Banner4Shape6 from 'assets/images/main-banner/banner-four/banner-four-shape6.png'
+import Banner4Shape7 from 'assets/images/main-banner/banner-four/banner-four-shape7.png'
+import Banner4Shape8 from 'assets/images/main-banner/banner-four/banner-four-shape8.png'
+import Banner4Shape9 from 'assets/images/main-banner/banner-four/banner-four-shape9.png'
+import Banner4Shape10 from 'assets/images/main-banner/banner-four/banner-four-shape10.png'
+import Banner4MainImage from 'assets/images/main-banner/banner-four/banner-four-main-img.png'
 
 const MainBanner = () => {
     return (

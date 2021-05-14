@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import SocialLinks from '../Socials/SocialLinks'
+import SocialLinks from 'components/Socials/SocialLinks'
 
 const Player = (props) => {
     const { player } = props

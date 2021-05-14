@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import icon1 from '../../assets/images/icons/icon1.png'
-import icon2 from '../../assets/images/icons/icon2.png'
-import icon3 from '../../assets/images/icons/icon3.png'
-import shape2 from '../../assets/images/services/service-shape2.png'
+import icon1 from 'assets/images/icons/icon1.png'
+import icon2 from 'assets/images/icons/icon2.png'
+import icon3 from 'assets/images/icons/icon3.png'
+import shape2 from 'assets/images/services/service-shape2.png'
 
 const FeaturedService = () => {
     return (

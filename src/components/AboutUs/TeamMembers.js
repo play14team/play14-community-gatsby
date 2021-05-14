@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import Players from '../Players/Players'
+import Players from 'components/Players/Players'
 
-import starIcon from '../../assets/images/star-icon.png'
+import starIcon from 'assets/images/star-icon.png'
 
 
 const TeamMembers = (props) => {

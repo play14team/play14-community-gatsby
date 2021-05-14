@@ -1,10 +1,10 @@
 import React from 'react'
-import starIcon from '../../assets/images/star-icon.png'
-import process7 from '../../assets/images/process/process7.png'
-import small1 from '../../assets/images/process/process-small1.png'
-import small4 from '../../assets/images/process/process-small4.png'
-import small5 from '../../assets/images/process/process-small5.png'
-import small6 from '../../assets/images/process/process-small6.png'
+import starIcon from 'assets/images/star-icon.png'
+import process7 from 'assets/images/process/process7.png'
+import small1 from 'assets/images/process/process-small1.png'
+import small4 from 'assets/images/process/process-small4.png'
+import small5 from 'assets/images/process/process-small5.png'
+import small6 from 'assets/images/process/process-small6.png'
 
 const HowItWork = () => {
     return (

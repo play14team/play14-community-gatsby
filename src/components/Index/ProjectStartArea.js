@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import projectStart from '../../assets/images/project-start1.png'
-import shape from '../../assets/images/shape/circle-shape1.png'
+import projectStart from 'assets/images/project-start1.png'
+import shape from 'assets/images/shape/circle-shape1.png'
 
 const ProjectStartArea = () => {
     return (

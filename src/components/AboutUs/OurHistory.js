@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Moment from 'react-moment';
 import 'moment-timezone';
 
-import starIcon from '../../assets/images/star-icon.png'
+import starIcon from 'assets/images/star-icon.png'
 
 
 const OurHistory = () => {

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import starIcon from '../../assets/images/star-icon.png'
-import study1 from '../../assets/images/case-study/case-study1.jpg'
-import study2 from '../../assets/images/case-study/case-study2.jpg'
+import starIcon from 'assets/images/star-icon.png'
+import study1 from 'assets/images/case-study/case-study1.jpg'
+import study2 from 'assets/images/case-study/case-study2.jpg'
 import Loadable from '@loadable/component'
 const OwlCarousel = Loadable(() => import('react-owl-carousel3'))
 

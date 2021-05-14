@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from "../components/App/Layout"
 import Navbar from "../components/App/Navbar"
-import PageBanner from '../components/Common/PageBanner'
+import PageBanner from 'components//Common/PageBanner'
 import Footer from "../components/App/Footer"
-import OurHistory from '../components/AboutUs/OurHistory'
+import OurHistory from 'components//AboutUs/OurHistory'
 
 const History = () => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import ModalVideo from 'react-modal-video'
-import course1 from '../../assets/images/courses/course1.jpg'
+import course1 from 'assets/images/courses/course1.jpg'
 // functional component
 const CoursesDetailsSidebar = () => {
     const [isOpen, setIsOpen] = React.useState(true);

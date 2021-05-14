@@ -2,11 +2,11 @@ import React from 'react';
 import {Link} from 'gatsby'
 import ModalVideo from 'react-modal-video';
 
-import AboutImg from '../../assets/images/about/about-img9.jpg'
-import StarIcon from '../../assets/images/star-icon.png'
-import Icon4 from '../../assets/images/icons/icon4.png'
-import Icon5 from '../../assets/images/icons/icon5.png'
-import CircleShape1 from '../../assets/images/shape/circle-shape1.png'
+import AboutImg from 'assets/images/about/about-img9.jpg'
+import StarIcon from 'assets/images/star-icon.png'
+import Icon4 from 'assets/images/icons/icon4.png'
+import Icon5 from 'assets/images/icons/icon5.png'
+import CircleShape1 from 'assets/images/shape/circle-shape1.png'
 
 const AboutUs = () => {
     const [isOpen, setIsOpen] = React.useState(true);

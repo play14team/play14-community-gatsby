@@ -1,13 +1,13 @@
 import React from 'react';
 import {Link} from 'gatsby'
 
-import MapShape2 from '../../assets/images/shape/map-shape2.png'
-import Partner1 from '../../assets/images/partner/partner1.png'
-import Partner2 from '../../assets/images/partner/partner2.png'
-import Partner3 from '../../assets/images/partner/partner3.png'
-import Partner4 from '../../assets/images/partner/partner4.png'
-import Partner5 from '../../assets/images/partner/partner5.png'
-import Partner6 from '../../assets/images/partner/partner6.png'
+import MapShape2 from 'assets/images/shape/map-shape2.png'
+import Partner1 from 'assets/images/partner/partner1.png'
+import Partner2 from 'assets/images/partner/partner2.png'
+import Partner3 from 'assets/images/partner/partner3.png'
+import Partner4 from 'assets/images/partner/partner4.png'
+import Partner5 from 'assets/images/partner/partner5.png'
+import Partner6 from 'assets/images/partner/partner6.png'
 
 const WhyChooseUs = () => {
     return (

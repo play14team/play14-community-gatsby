@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'gatsby'
 import ReactWOW from 'react-wow';
 
-import MainImage from '../../assets/images/main-banner/main-pic1.png'
+import MainImage from 'assets/images/main-banner/main-pic1.png'
 
 const MainBanner = () => {
     return (

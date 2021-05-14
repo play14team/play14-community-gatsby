@@ -1,13 +1,13 @@
 import React from 'react';
 import {Link} from 'gatsby'
 
-import StarIcon from '../../assets/images/star-icon.png'
-import ProjectImage1 from '../../assets/images/projects/project1.jpg'
-import ProjectImage2 from '../../assets/images/projects/project2.jpg'
-import ProjectImage3 from '../../assets/images/projects/project3.jpg'
-import ProjectImage4 from '../../assets/images/projects/project4.jpg'
-import ProjectImage5 from '../../assets/images/projects/project5.jpg'
-import ProjectImage6 from '../../assets/images/projects/project6.jpg'
+import StarIcon from 'assets/images/star-icon.png'
+import ProjectImage1 from 'assets/images/projects/project1.jpg'
+import ProjectImage2 from 'assets/images/projects/project2.jpg'
+import ProjectImage3 from 'assets/images/projects/project3.jpg'
+import ProjectImage4 from 'assets/images/projects/project4.jpg'
+import ProjectImage5 from 'assets/images/projects/project5.jpg'
+import ProjectImage6 from 'assets/images/projects/project6.jpg'
 
 const RecentProjects = () => {
     return (

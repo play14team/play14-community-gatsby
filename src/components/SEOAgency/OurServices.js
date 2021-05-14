@@ -1,12 +1,12 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import serviceIcon7 from '../../assets/images/services/service-icon7.png'
-import serviceIcon8 from '../../assets/images/services/service-icon8.png'
-import serviceIcon9 from '../../assets/images/services/service-icon9.png'
-import serviceIcon10 from '../../assets/images/services/service-icon10.png'
-import serviceIcon11 from '../../assets/images/services/service-icon11.png'
-import serviceIcon12 from '../../assets/images/services/service-icon12.png'
-import serviceShape4 from '../../assets/images/services/service-shape4.png'
+import serviceIcon7 from 'assets/images/services/service-icon7.png'
+import serviceIcon8 from 'assets/images/services/service-icon8.png'
+import serviceIcon9 from 'assets/images/services/service-icon9.png'
+import serviceIcon10 from 'assets/images/services/service-icon10.png'
+import serviceIcon11 from 'assets/images/services/service-icon11.png'
+import serviceIcon12 from 'assets/images/services/service-icon12.png'
+import serviceShape4 from 'assets/images/services/service-shape4.png'
 
 const OurServices = () => {
     return (

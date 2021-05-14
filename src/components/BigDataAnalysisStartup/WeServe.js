@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'gatsby'
 
-import VectorShape11 from '../../assets/images/shape/vector-shape11.png'
+import VectorShape11 from 'assets/images/shape/vector-shape11.png'
 
 const WeServe = () => {
     return (

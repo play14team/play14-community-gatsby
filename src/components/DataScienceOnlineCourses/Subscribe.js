@@ -1,6 +1,6 @@
 import React from 'react'
-import subscribeImg1 from '../../assets/images/subscribe-img1.png'
-import shape6 from '../../assets/images/shape/vector-shape6.png'
+import subscribeImg1 from 'assets/images/subscribe-img1.png'
+import shape6 from 'assets/images/shape/vector-shape6.png'
 
 const Subscribe = () => {
     return (

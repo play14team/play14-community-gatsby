@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
 
-import StarIcon from '../../assets/images/star-icon.png'
+import StarIcon from 'assets/images/star-icon.png'
 
 const Solutions = () => {
     return (

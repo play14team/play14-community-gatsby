@@ -1,10 +1,10 @@
 import React from 'react'
-import partner1 from '../../assets/images/partner/partner1.png'
-import partner2 from '../../assets/images/partner/partner2.png'
-import partner3 from '../../assets/images/partner/partner3.png'
-import partner4 from '../../assets/images/partner/partner4.png'
-import partner5 from '../../assets/images/partner/partner5.png'
-import partner6 from '../../assets/images/partner/partner6.png'
+import partner1 from 'assets/images/partner/partner1.png'
+import partner2 from 'assets/images/partner/partner2.png'
+import partner3 from 'assets/images/partner/partner3.png'
+import partner4 from 'assets/images/partner/partner4.png'
+import partner5 from 'assets/images/partner/partner5.png'
+import partner6 from 'assets/images/partner/partner6.png'
 
 const Partner = () => {
     return (

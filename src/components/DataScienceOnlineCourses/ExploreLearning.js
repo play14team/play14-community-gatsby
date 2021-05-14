@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import ModalVideo from 'react-modal-video'
-import learning from '../../assets/images/explore-learning.jpg'
+import learning from 'assets/images/explore-learning.jpg'
 
 const ExploreLearning = () => {
     const [isOpen, setIsOpen] = React.useState(true);

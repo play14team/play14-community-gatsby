@@ -5,7 +5,7 @@ import Moment from 'react-moment';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import 'moment-timezone';
 import EventDate from './EventDate'
-import Carousel from '../Common/Carousel'
+import Carousel from 'components/Common/Carousel'
 
 const EventDescription = (props) => {
     const { event } = props

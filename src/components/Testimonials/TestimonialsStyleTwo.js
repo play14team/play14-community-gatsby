@@ -1,9 +1,9 @@
 import React from 'react'
-import starIcon from '../../assets/images/star-icon.png'
-import client1 from '../../assets/images/testimonials/client1.jpg'
-import client2 from '../../assets/images/testimonials/client2.jpg'
-import client3 from '../../assets/images/testimonials/client3.jpg'
-import shape from '../../assets/images/shape/shape1.svg'
+import starIcon from 'assets/images/star-icon.png'
+import client1 from 'assets/images/testimonials/client1.jpg'
+import client2 from 'assets/images/testimonials/client2.jpg'
+import client3 from 'assets/images/testimonials/client3.jpg'
+import shape from 'assets/images/shape/shape1.svg'
 
 const TestimonialsStyleTwo = () => {
     return (

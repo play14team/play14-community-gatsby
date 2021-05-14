@@ -1,13 +1,13 @@
 import React from 'react';
 import {Link} from 'gatsby'
 
-import Scientist9 from '../../assets/images/scientist/scientist9.jpg'
-import Scientist10 from '../../assets/images/scientist/scientist10.jpg'
-import Scientist11 from '../../assets/images/scientist/scientist11.jpg'
-import MapShape1 from '../../assets/images/shape/map-shape1.png'
-import VectorShape5 from '../../assets/images/shape/vector-shape5.png'
-import StarIcon from '../../assets/images/star-icon.png'
-import VectorShape4 from '../../assets/images/shape/vector-shape4.png'
+import Scientist9 from 'assets/images/scientist/scientist9.jpg'
+import Scientist10 from 'assets/images/scientist/scientist10.jpg'
+import Scientist11 from 'assets/images/scientist/scientist11.jpg'
+import MapShape1 from 'assets/images/shape/map-shape1.png'
+import VectorShape5 from 'assets/images/shape/vector-shape5.png'
+import StarIcon from 'assets/images/star-icon.png'
+import VectorShape4 from 'assets/images/shape/vector-shape4.png'
 
 const TeamMembers = () => {
     return (

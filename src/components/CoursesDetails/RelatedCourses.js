@@ -1,12 +1,12 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import course1 from '../../assets/images/courses/course1.jpg'
-import course2 from '../../assets/images/courses/course2.jpg'
-import course3 from '../../assets/images/courses/course3.jpg'
-import user1 from '../../assets/images/user1.jpg'
-import user2 from '../../assets/images/user2.jpg'
-import user3 from '../../assets/images/user3.jpg'
-import shape from '../../assets/images/shape/vector-shape6.png'
+import course1 from 'assets/images/courses/course1.jpg'
+import course2 from 'assets/images/courses/course2.jpg'
+import course3 from 'assets/images/courses/course3.jpg'
+import user1 from 'assets/images/user1.jpg'
+import user2 from 'assets/images/user2.jpg'
+import user3 from 'assets/images/user3.jpg'
+import shape from 'assets/images/shape/vector-shape6.png'
 
 const RelatedCourses = () => {
     return (

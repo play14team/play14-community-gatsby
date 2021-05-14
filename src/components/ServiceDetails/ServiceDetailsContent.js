@@ -1,8 +1,8 @@
 import React from 'react'
 import ServiceSidebar from './ServiceSidebar'
-import details1 from '../../assets/images/services/services-details1.jpg'
-import project2 from '../../assets/images/projects/project2.jpg'
-import charts from '../../assets/images/services/charts.jpg'
+import details1 from 'assets/images/services/services-details1.jpg'
+import project2 from 'assets/images/projects/project2.jpg'
+import charts from 'assets/images/services/charts.jpg'
 
 const ServiceDetailsContent = () => {
     return (

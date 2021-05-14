@@ -2,13 +2,13 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import Markdown from "markdown-to-jsx"
 
-import aboutImage from '../../assets/images/play14-movement.png'
-import starIcon from '../../assets/images/star-icon.png'
-import icon4 from '../../assets/images/icons/icon4.png'
-import icon5 from '../../assets/images/icons/icon5.png'
-import icon6 from '../../assets/images/icons/icon6.png'
-import icon7 from '../../assets/images/icons/icon7.png'
-import shape1 from '../../assets/images/shape/circle-shape1.png'
+import aboutImage from 'assets/images/play14-movement.png'
+import starIcon from 'assets/images/star-icon.png'
+import icon4 from 'assets/images/icons/icon4.png'
+import icon5 from 'assets/images/icons/icon5.png'
+import icon6 from 'assets/images/icons/icon6.png'
+import icon7 from 'assets/images/icons/icon7.png'
+import shape1 from 'assets/images/shape/circle-shape1.png'
 
 const AboutUsContent = () => {
     const { manifesto, codeOfConduct, numberOfEvents, numberOfPlayers, numberOfGames } = useStaticQuery(query)

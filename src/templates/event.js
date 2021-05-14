@@ -3,9 +3,9 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/App/Layout"
 import Navbar from "../components/App/Navbar"
-import PageBanner from '../components/Common/PageBanner'
+import PageBanner from 'components//Common/PageBanner'
 import Footer from "../components/App/Footer"
-import EventDetailsContent from '../components/Events/EventDetailsContent'
+import EventDetailsContent from 'components//Events/EventDetailsContent'
 
 const Event = ({ data }) => {
   return (

@@ -1,13 +1,13 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import scientist1 from '../../assets/images/scientist/scientist1.png'
-import scientist2 from '../../assets/images/scientist/scientist2.png'
-import scientist3 from '../../assets/images/scientist/scientist3.png'
-import scientist4 from '../../assets/images/scientist/scientist4.png'
-import scientist5 from '../../assets/images/scientist/scientist5.png'
-import scientist6 from '../../assets/images/scientist/scientist6.png'
-import scientist7 from '../../assets/images/scientist/scientist7.png'
-import scientist8 from '../../assets/images/scientist/scientist8.png'
+import scientist1 from 'assets/images/scientist/scientist1.png'
+import scientist2 from 'assets/images/scientist/scientist2.png'
+import scientist3 from 'assets/images/scientist/scientist3.png'
+import scientist4 from 'assets/images/scientist/scientist4.png'
+import scientist5 from 'assets/images/scientist/scientist5.png'
+import scientist6 from 'assets/images/scientist/scientist6.png'
+import scientist7 from 'assets/images/scientist/scientist7.png'
+import scientist8 from 'assets/images/scientist/scientist8.png'
 
 const TeamStyleOne = () => {
     return (

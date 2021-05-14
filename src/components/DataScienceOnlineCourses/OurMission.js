@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import mission2 from '../../assets/images/our-mission/our-mission2.png'
-import shape1 from '../../assets/images/our-mission/our-mission-shape1.png'
+import mission2 from 'assets/images/our-mission/our-mission2.png'
+import shape1 from 'assets/images/our-mission/our-mission-shape1.png'
 
 const OurMission = () => {
     return (
