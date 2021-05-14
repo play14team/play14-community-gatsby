@@ -3,17 +3,17 @@ import Navbar from 'components/App/Navbar'
 import Footer from 'components/App/Footer'
 import Layout from 'components/App/Layout'
 
-import MainBanner from 'components/MachineLearningAISolutions/MainBanner';
-import Solutions from 'components/MachineLearningAISolutions/Solutions';
-import AboutUs from 'components/MachineLearningAISolutions/AboutUs';
-import Services from 'components/MachineLearningAISolutions/Services';
-import HowItWork from 'components/MachineLearningAISolutions/HowItWork';
-import RecentProjects from 'components/MachineLearningAISolutions/RecentProjects';
-import TeamMember from 'components/MachineLearningAISolutions/TeamMember';
-import Testimonials from 'components/MachineLearningAISolutions/Testimonials';
-import Partner from 'components/MachineLearningAISolutions/Partner';
-import OurBlog from 'components/MachineLearningAISolutions/OurBlog';
-import ProjectStartArea from 'components/MachineLearningAISolutions/ProjectStartArea';
+import MainBanner from 'components/Others/MachineLearningAISolutions/MainBanner';
+import Solutions from 'components/Others/MachineLearningAISolutions/Solutions';
+import AboutUs from 'components/Others/MachineLearningAISolutions/AboutUs';
+import Services from 'components/Others/MachineLearningAISolutions/Services';
+import HowItWork from 'components/Others/MachineLearningAISolutions/HowItWork';
+import RecentProjects from 'components/Others/MachineLearningAISolutions/RecentProjects';
+import TeamMember from 'components/Others/MachineLearningAISolutions/TeamMember';
+import Testimonials from 'components/Others/MachineLearningAISolutions/Testimonials';
+import Partner from 'components/Others/MachineLearningAISolutions/Partner';
+import OurBlog from 'components/Others/MachineLearningAISolutions/OurBlog';
+import ProjectStartArea from 'components/Others/MachineLearningAISolutions/ProjectStartArea';
 
 
 const Home = () => {

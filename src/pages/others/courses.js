@@ -3,7 +3,7 @@ import Layout from 'components/App/Layout'
 import Navbar from 'components/App/Navbar'
 import PageBanner from 'components/Common/PageBanner'
 import Footer from 'components/App/Footer'
-import CoursesContent from 'components/Courses/CoursesContent'
+import CoursesContent from 'components/Others/Courses/CoursesContent'
 
 const CoursesGrid = () => {
     return (

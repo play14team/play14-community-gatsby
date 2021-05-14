@@ -3,8 +3,8 @@ import Layout from 'components/App/Layout'
 import Navbar from 'components/App/Navbar'
 import PageBanner from 'components/Common/PageBanner'
 import Footer from 'components/App/Footer'
-import CaseStudiesDetailsContent from 'components/CaseStudiesDetails/CaseStudiesDetailsContent'
-import RelatedProjects from 'components/CaseStudiesDetails/RelatedProjects'
+import CaseStudiesDetailsContent from 'components/Others/CaseStudiesDetails/CaseStudiesDetailsContent'
+import RelatedProjects from 'components/Others/CaseStudiesDetails/RelatedProjects'
 
 const CaseDetails = () => {
     return (

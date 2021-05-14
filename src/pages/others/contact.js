@@ -3,8 +3,8 @@ import Layout from 'components/App/Layout'
 import Navbar from 'components/App/Navbar'
 import PageBanner from 'components/Common/PageBanner'
 import Footer from 'components/App/Footer'
-import ContactInfo from 'components/Contact/ContactInfo'
-import ContactForm from 'components/Contact/ContactForm'
+import ContactInfo from 'components/Others/Contact/ContactInfo'
+import ContactForm from 'components/Others/Contact/ContactForm'
 const Contact = () => {
     return (
         <Layout>
