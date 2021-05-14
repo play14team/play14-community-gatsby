@@ -64,8 +64,8 @@ const Navbar = () => {
                                     <NavItem name="About Us" to="#">
                                             <NavItem name="About" to="/about-us" setCollapsed={setCollapsed} />
                                             <NavItem name="History" to="/history" setCollapsed={setCollapsed} />
+                                            <NavItem name="Unconference" to="/unconference" setCollapsed={setCollapsed} />
                                             <NavItem name="Gallery" to="/gallery" setCollapsed={setCollapsed} />
-                                            <NavItem name="FAQ" to="/faq" setCollapsed={setCollapsed} />
                                             <NavItem name="Privacy Policy" to="/privacy-policy" setCollapsed={setCollapsed} />
                                     </NavItem>
 

@@ -15,7 +15,7 @@ const HowItWorks = () => {
                 <div className="section-title">
                     <span className="sub-title">
                         <img src={starIcon} alt="about" /> 
-                        How It's Work
+                        How it works
                     </span>
                     <h2>The Data Science Process</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>

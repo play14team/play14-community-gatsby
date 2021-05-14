@@ -6,7 +6,6 @@ import Footer from 'components/App/Footer'
 import OurRules from 'components/AboutUs/OurRules'
 import OurNumbers from 'components/AboutUs/OurNumbers'
 import WhyJoinUs from 'components/AboutUs/WhyJoinUs'
-import HowItWorks from 'components/AboutUs/HowItWorks'
 import TeamMembers from 'components/AboutUs/TeamMembers'
 import Testimonials from 'components/AboutUs/Testimonials'
 import Partner from 'components/AboutUs/Partner'
@@ -25,7 +24,6 @@ const AboutUs = () => {
             <WhyJoinUs />
             <OurNumbers />
             <OurRules />
-            <HowItWorks />
             <FindingUs />
             <TeamMembers />
             <Testimonials />
