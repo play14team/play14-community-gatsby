@@ -18,7 +18,7 @@ const AboutUsContent = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-12">
                         <div className="about-image">
-                            <img src={aboutImage} alt="banner" />
+                            <img src={aboutImage} alt="banner" width="80%" />
                         </div>
                     </div>
 
@@ -55,11 +55,6 @@ const AboutUsContent = () => {
                                         <p>Games documented</p>
                                     </li>
                                 </ul>
-                                <p>
-                                    There are only few rules at #play14, but we strongly believe in the importance of the rules we have. 
-                                    They are what makes #play14 a special place. Please read them before you join an event and make sure to have them in mind when you are on site.
-                                </p>
-                                
                                 <Link to="/history" className="default-btn">
                                     <i className="flaticon-right"></i>Learn our history<span></span>
                                 </Link>
@@ -77,8 +72,14 @@ const AboutUsContent = () => {
             <div className="container">
                 <div className="about-inner-area">
                     <div className="row">
+                        <h2>Our rules</h2>
+                        <p>
+                            There are only a few rules at #play14, but we strongly believe in the importance of these rules. 
+                            They are what makes #play14 a special place. Please read them before you join an event and make sure you are ready to comply with them when you are on site.
+                        </p>
+                                
 
-                        <div className="col-lg-6 col-md-6 col-sm-6">
+                        <div className="col-lg-6 col-md-6 col-sm-6 pt-70">
                             <div className="about-text">
                                 <h3>Our Manifesto</h3>
                                 <p>{manifesto.introduction}</p>
@@ -95,7 +96,7 @@ const AboutUsContent = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-6 col-md-6 col-sm-6">
+                        <div className="col-lg-6 col-md-6 col-sm-6 pt-70">
                             <div className="about-text">
                                 <h3>Our Code of Conduct</h3>
                                 <p>{codeOfConduct.introduction}</p>

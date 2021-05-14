@@ -18,6 +18,12 @@ module.exports = {
     'gatsby-plugin-resolve-src',
     `gatsby-plugin-image`,
     {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        implementation: require("sass"),
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
