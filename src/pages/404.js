@@ -1,7 +1,7 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from "../components/App/Layout"
+import Layout from 'components/App/Layout'
 
 const NotFoundPage = () => (
   <Layout title="Not found">

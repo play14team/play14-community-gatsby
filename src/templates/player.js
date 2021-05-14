@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react'
 import { graphql } from "gatsby"
 
-import Layout from "../components/App/Layout"
-import Navbar from "../components/App/Navbar"
-import PageBanner from 'components//Common/PageBanner'
-import Footer from "../components/App/Footer"
-import PlayerDetailsContent from "../components/Players/PlayerDetailsContent"
+import Layout from 'components/App/Layout'
+import Navbar from 'components/App/Navbar'
+import PageBanner from 'components/Common/PageBanner'
+import Footer from 'components/App/Footer'
+import PlayerDetailsContent from 'components/Players/PlayerDetailsContent'
 
 const Player = ({ data }) => {
   const { player } = data

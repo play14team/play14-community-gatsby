@@ -3,22 +3,20 @@ import Layout from 'components/App/Layout'
 import Navbar from 'components/App/Navbar'
 import PageBanner from 'components/Common/PageBanner'
 import Footer from 'components/App/Footer'
-import OurHistory from 'components/AboutUs/OurHistory'
 
-const History = () => {
+const Unconference = () => {
     return (
-        <Layout title="History">
+        <Layout title="Unconference">
             <Navbar />
             <PageBanner
-                pageTitle="History" 
+                pageTitle="Unconference" 
                 homePageText="Home" 
                 homePageUrl="/" 
-                activePageText="History" 
+                activePageText="Unconference" 
             />
-            <OurHistory />
             <Footer />
         </Layout>
     );
 }
 
-export default History
+export default Unconference
