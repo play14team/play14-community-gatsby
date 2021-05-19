@@ -31,11 +31,11 @@ const Marketplace = () => {
                     { marketplace.marketplacesteps.map((step, i) =>
                         <div className="col-lg-4 col-md-6">
                             <div className="single-process-box">
-                                <div className="number">{i}</div>
-                                <div className="image">
-                                    {/* <GatsbyImage image={getImage(step.image)} alt={step.title} /> */}
-                                </div>
+                                <div className="number">{i+1}</div>
                                 <h3>{step.title}</h3>
+                                <div className="image">
+                                    <GatsbyImage image={getImage(step.sketch)} alt={step.title} />
+                                </div>
                                 <p>{step.description}</p>
                             </div>
                         </div>
@@ -61,7 +61,12 @@ query {
       marketplacesteps {
         title
         description
+        sketch {
+          childImageSharp {
+            gatsbyImageData (height:250)
+          }
+        }
       }
     }
   }
-  `
+`
