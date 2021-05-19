@@ -6,78 +6,34 @@ import {
     AccordionItemPanel,
     AccordionItemButton
 } from 'react-accessible-accordion'
+import { graphql, useStaticQuery} from 'gatsby'
+import Markdown from 'markdown-to-jsx'
 
 const FAQ = () => {
+    const { faq } = useStaticQuery(query)
     return (
         <div className="ptb-100">
             <div className="container">
-                <div className="faq-accordion">
-                    <Accordion>
-                        <AccordionItem>
-                            <AccordionItemHeading>
-                                <AccordionItemButton>
-                                    Q1. What is Data Science? List the differences between supervised and unsupervised learning.
-                                </AccordionItemButton>
-                            </AccordionItemHeading>
-                            <AccordionItemPanel>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </p>
-                            </AccordionItemPanel>
-                        </AccordionItem>
-
-                        <AccordionItem>
-                            <AccordionItemHeading>
-                                <AccordionItemButton>
-                                    Q2. What is Selection Tracer.com?
-                                </AccordionItemButton>
-                            </AccordionItemHeading>
-                            <AccordionItemPanel>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </p>
-                            </AccordionItemPanel>
-                        </AccordionItem>
-
-                        <AccordionItem>
-                            <AccordionItemHeading>
-                                <AccordionItemButton>
-                                    Q3. What is tracer-variance trade-off?
-                                </AccordionItemButton>
-                            </AccordionItemHeading>
-                            <AccordionItemPanel>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </p>
-                            </AccordionItemPanel>
-                        </AccordionItem>
-
-                        <AccordionItem>
-                            <AccordionItemHeading>
-                                <AccordionItemButton>
-                                    Q4. What is a confusion matrix?
-                                </AccordionItemButton>
-                            </AccordionItemHeading>
-                            <AccordionItemPanel>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </p>
-                            </AccordionItemPanel>
-                        </AccordionItem>
-
-                        <AccordionItem>
-                            <AccordionItemHeading>
-                                <AccordionItemButton>
-                                    Q5. What is the difference between “long” and “wide” format data?
-                                </AccordionItemButton>
-                            </AccordionItemHeading>
-                            <AccordionItemPanel>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </p>
-                            </AccordionItemPanel>
-                        </AccordionItem>
-                    </Accordion>
+                <div className="col-lg-12 col-md-12 col-sm-12 pt-70">
+                    <h3>FAQ</h3>
+                    <div className="faq-accordion">
+                        <Accordion>
+                            {faq.questions.map((question, i) => 
+                                <AccordionItem>
+                                    <AccordionItemHeading>
+                                        <AccordionItemButton>
+                                            {`Q${i+1}. ${question.text}`}
+                                        </AccordionItemButton>
+                                    </AccordionItemHeading>
+                                    <AccordionItemPanel>
+                                        <Markdown>
+                                            {question.answer}
+                                        </Markdown>
+                                    </AccordionItemPanel>
+                                </AccordionItem>
+                            )}
+                        </Accordion>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,3 +41,15 @@ const FAQ = () => {
 }
 
 export default FAQ
+
+const query = graphql`
+query {
+    faq : strapiFaq {
+      questions {
+        text
+        answer
+      }
+    }
+  }
+  
+`

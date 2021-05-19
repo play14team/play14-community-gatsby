@@ -64,7 +64,10 @@ module.exports = {
           `contact`,
           `history`,
           `manifesto`,
-          `code-of-conduct`
+          `code-of-conduct`,
+          `faq`,
+          `unconference`,
+          `marketplace`
         ],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {

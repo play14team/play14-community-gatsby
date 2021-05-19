@@ -2,7 +2,8 @@ import React from 'react'
 import Layout from 'components/App/Layout'
 import Navbar from 'components/App/Navbar'
 import PageBanner from 'components/Common/PageBanner'
-import HowItWorks from 'components/AboutUs/HowItWorks'
+import OpenSpacePrinciples from 'components/AboutUs/OpenSpacePrinciples'
+import Marketplace from 'components/AboutUs/Marketplace'
 import FAQ from 'components/AboutUs/FAQ'
 import Footer from 'components/App/Footer'
 
@@ -16,7 +17,8 @@ const Unconference = () => {
                 homePageUrl="/" 
                 activePageText="Unconference" 
             />
-            <HowItWorks />
+            <OpenSpacePrinciples />
+            <Marketplace />
             <FAQ />
             <Footer />
         </Layout>
